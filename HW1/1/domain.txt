@@ -1,0 +1,178 @@
+
+University
+Class representing simple university.
+
+- Name
+    - Property: Name
+    - Type: String
+    - Name: Name
+    - Description: Name of the university.
+    - Example: Charles University
+
+- ID
+    - Property: ID
+    - Type: String
+    - Name: ID
+    - Description: Unique identificator of the university.
+    - Example: cuni.cz
+
+- Web page
+    - Property: Web page
+    - Type: URL
+    - Name: Web page
+    - Description: Link to a web site of the university.
+    - Example: cuni.cz
+
+- Bond: Dormitory
+    - Bond: Dormitory
+    - Type: Dormitory
+    - Name: Has
+    - Description: Dormitory which is operated by the university.
+
+- Bond: Student
+    - Bond: Student
+    - Type: Student
+    - Name: Provides studies to
+    - Description: Student which is studying at the university.
+
+Dormitory
+Class representing the dormitory building.
+
+- Address
+    - Property: Address
+    - Type: String
+    - Name: Address
+    - Description: Postal address of the dormitory.
+    - Example: Kolej Švehlova, Slavíkova 22, 130 00 Praha 3
+
+- Name
+    - Property: Name
+    - Type: String
+    - Name: Name
+    - Description: Name of the dormitory.
+    - Example: Kolej Švehlova
+
+- Has bed bugs
+    - Property: Has bed bugs
+    - Type: Boolean
+    - Name: Has bed bugs
+    - Description: Boolean if the dormitory has bed bugs.
+    - Example: True
+
+- Bond: Dorm room
+    - Bond: Dorm room
+    - Type: Dorm room
+    - Name: Has
+    - Description: Dorm room which is located in the dormitory.
+
+- Bond: Janitor
+    - Bond: Janitor
+    - Type: Janitor
+    - Name: Is cleaned by
+    - Description: Janitor who works in the dormitory.
+
+- Bond: University
+    - Bond: University
+    - Type: University
+    - Name: Belongs to
+    - Description: University to which the dormitory belongs.
+
+Dorm room
+Class representing room in the dormitory.
+
+- Floor
+    - Property: Floor
+    - Type: Number
+    - Name: Floor 
+    - Description: Floor number of the room counted from zero.
+    - Example: 1
+
+- Room number
+    - Property: Number
+    - Type: Number
+    - Name: Number
+    - Description: Unique number of the room.
+    - Example: 333
+
+- Capacity
+    - Property: Capacity
+    - Type: Number
+    - Name: Capacity
+    - Description: Capacity of the room.
+    - Example: 2
+
+- Has toilet
+    - Property: Has toilet
+    - Type: Boolean
+    - Name: Has toilet
+    - Description: Boolean if the room has toilet.
+    - Example: False
+
+- Bond: Dormitory
+    - Bond: Dormitory
+    - Type: Dormitory
+    - Name: Is in
+    - Description: Dormitory in which the room is located.
+
+- Bond: Student
+    - Bond: Student
+    - Type: Student
+    - Name: Accommodates
+    - Description: Student who is accommodated in the dorm room.
+
+Person
+Class representing a person in the system.
+
+- First name
+    - Property: First name
+    - Type: String
+    - Name: First name
+    - Description: First name of the person.
+    - Example: Pepa
+
+- Last name
+    - Property: Last name
+    - Type: String
+    - Name: Last name
+    - Description: Last name of the person.
+    - Example: Vomáčka
+
+- ID
+    - Property: ID
+    - Type: Number
+    - Name: ID
+    - Description: Identificator of the person.
+    - Example: 123456789
+
+Janitor
+Class representing a janitor in the system.
+The class is derived from the class Person and has all the properties of it. 
+
+- Owns broom
+    - Property: Owns broom
+    - Type: Boolean
+    - Name: Owns broom
+    - Description: Boolean if the janitor owns a broom.
+    - Example: True
+
+- Bond: Dormitory
+    - Bond: Dormitory
+    - Type: Dormitory
+    - Name: Works in
+    - Description: Dormitory in which janitor works.
+
+Student
+Class representing a student in the system. 
+The class is derived from the class Person and has all the properties of it. 
+
+- Bond: University
+    - Bond: University
+    - Type: University
+    - Name: Studies at
+    - Description: University at which the student studies.
+
+- Bond: Dorm room
+    - Bond: Dorm room
+    - Type: Dorm room
+    - Name: Stays in
+    - Description: Dorm room at which the student stays.
