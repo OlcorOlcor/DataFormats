@@ -130,6 +130,13 @@ Class representing a person in the system.
     - Description: First name of the person.
     - Example: Pepa
 
+- Middle names
+    - Property: Middle names
+    - Type: Text
+    - Name: Middle names
+    - Description: Middle names of the person.
+    - Example: Josef Jožka
+
 - Last name
     - Property: Last name
     - Type: String
