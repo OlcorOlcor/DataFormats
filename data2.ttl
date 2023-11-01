@@ -12,6 +12,11 @@ ex:University a rdfs:Class ;
     rdfs:label "University"@en ;
     rdfs:comment "Class representing a simple university." .
 
+ex:janitorBroom a rdfs:Property ;
+    rdfs:comment "If janitor has a broom."@en ;
+    rdfs:domain ex:Janitor ;
+    rdfs:range xsd:boolean .
+
 ex:universityName a rdf:Property ;
     rdfs:label "Name of the university."@en ;
     rdfs:domain ex:University ;
@@ -49,4 +54,3 @@ uni:Harvard rdf:type ex:University ;
     ex:universityID 1 ;
     ex:universityWebPage <https://pll.harvard.edu/> .
 
-dorm:
