@@ -1,0 +1,14 @@
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:University a rdfs:Class ;
+    rdfs:label "University"@en ;
+    rdfs:comment "Class representing a simple university." .
+
+ex:Name a rdf:Property ;
+    rdfs:label "Name of the object."@en ;
+    rdfs:domain ex:University ;
+    rdfs:domain ex:Dormitory ;
+    rdfs:range rdf:langString .
