@@ -48,3 +48,5 @@ uni:Harvard rdf:type ex:University ;
     ex:universityName "Harvard" ;
     ex:universityID 1 ;
     ex:universityWebPage <https://pll.harvard.edu/> .
+
+dorm:
