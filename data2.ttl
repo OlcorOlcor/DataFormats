@@ -1,0 +1,50 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix data: <http://www.our-example-data.org/> .
+@prefix uni: <http://www.our-example-data.org/university> .
+@prefix dorm: <http://www.our-example-data.org/dormitory> .
+
+ex:University a rdfs:Class ;
+    rdfs:label "University"@en ;
+    rdfs:comment "Class representing a simple university." .
+
+ex:universityName a rdf:Property ;
+    rdfs:label "Name of the university."@en ;
+    rdfs:domain ex:University ;
+    rdfs:range rdf:langString .
+
+ex:universityID a rdf:Property ;
+    rdfs:label "ID of the university."@en ;
+    rdfs:domain ex:University ;
+    rdfs:range xsd:int .
+
+ex:universityWebPage a rdf:Property ;
+    rdfs:label "Web page of the university."@en ;
+    rdfs:domain ex:University ;
+    rdfs:range foaf:homepage .
+
+
+uni:Cambridge rdf:type ex:University ;
+    ex:universityName "Cambridge" ;
+    ex:universityID 1 ;
+    ex:universityWebPage <https://www.cam.ac.uk/> .
+
+<https://www.cam.ac.uk/> a foaf:Document ;
+    foaf:name "Cambridge"@en .
+
+uni:CharlesUniversity rdf:type ex:University ;
+    ex:universityName "Charles university" ;
+    ex:universityID 1 ; 
+    ex:universityWebPage <https://cuni.cz/> .
+
+<https://cuni.cz/> a foaf:Document ;
+    foaf:name "CharlesUniversity"@en .
+
+uni:Harvard rdf:type ex:University ;
+    ex:universityName "Harvard" ;
+    ex:universityID 1 ;
+    ex:universityWebPage <https://pll.harvard.edu/> .
