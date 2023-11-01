@@ -1,14 +1,72 @@
-@prefix ex: <http://example.org/vocabulary/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix data: <http://www.our-example-data.org/> .
+@prefix uni: <http://www.our-example-data.org/university> .
+
+uni:Cambridge rdf:type ex:University ;
+    ex:universityName "Cambridge" ;
+    ex:universityID 1 ;
+    ex:universityWebPage <https://www.cam.ac.uk/> .
+
+<https://www.cam.ac.uk/> a foaf:Document ;
+    foaf:name "Cambridge"@en .
+
 
 ex:University a rdfs:Class ;
     rdfs:label "University"@en ;
     rdfs:comment "Class representing a simple university." .
 
-ex:Name a rdf:Property ;
-    rdfs:label "Name of the object."@en ;
+ex:universityName a rdf:Property ;
+    rdfs:label "Name of the university."@en ;
     rdfs:domain ex:University ;
+    rdfs:range rdf:langString .
+
+ex:universityID a rdf:Property ;
+    rdfs:label "ID of the university."@en ;
+    rdfs:domain ex:University ;
+    rdfs:range xsd:int .
+
+ex:universityWebPage a rdf:Property ;
+    rdfs:label "Web page of the university."@en ;
+    rdfs:domain ex:University ;
+    rdfs:range foaf:homepage .
+
+
+
+ex:Dormitory a rdfs:Class ;
+    rdfs:label "Dormitory"@en ;
+    rdfs:comment "Class representing the dormitory building." .
+
+ex:dormitoryName a rdf:Property ;
+    rdfs:label "Name of the dormitory."@en ;
     rdfs:domain ex:Dormitory ;
     rdfs:range rdf:langString .
+
+ex:dormitoryAddress a rdf:Property ;
+    rdfs:label "Address of the dormitory."@en ;
+    rdfs:domain ex:Dormitory ;
+    rdfs:range rdf:langString .
+
+
+ex:DormRoom a rdfs:Class ;
+    rdfs:label "Dorm room"@en ;
+    rdfs:comment "Class representing a room in the dormitory." .
+
+
+ex:Person a rdfs:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "Class representing a person in the system." .
+
+ex:Janitor rdfs:subClassOf ex:Person ;
+    rdfs:label "Janitor"@en ;
+    rdfs:comment "Class representing a janitor in the system. The class is derived from the class Person and has all the properties of it." .
+
+ex:Student rdfs:subClassOf ex:Person ;
+    rdfs:label "Student"@en ;
+    rdfs:comment "Class representing a student in the system. The class is derived from the class Person and has all the properties of it." .
+
+
