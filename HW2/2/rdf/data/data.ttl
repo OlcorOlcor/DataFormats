@@ -63,7 +63,7 @@ ex:Person a rdfs:Class ;
 
 ex:Janitor rdfs:subClassOf ex:Person ;
     rdfs:label "Janitor"@en ;
-    rdfs:comment "Class representing a janitor in the system. The class is derived from the class Person and has all the properties of it." .
+    rdfs:comment "Class representing a simple janitor in the system. The class is derived from the class Person and has all the properties of it." .
 
 ex:Student rdfs:subClassOf ex:Person ;
     rdfs:label "Student"@en ;
