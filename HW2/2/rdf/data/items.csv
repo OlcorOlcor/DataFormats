@@ -1,0 +1,21 @@
+University
+Name;ID;Web Page
+Charles University;1;https://cuni.cz/
+Cambridge;2;https://www.cam.ac.uk/
+Harvard;3;https://pll.harvard.edu/
+Dormitory
+Address;Name;Has bed bugs
+Praha Pátkova 2136/3;17. Listopadu;False
+Praha Vaníčkova 315/7;Strahov;True
+Cambridge O'Brians street;Cambridge Dormitory;False
+Dorm room
+Floor;Number;Capacity;Has toilet
+42;421;4;True
+0;10;2;False
+100;1000;3;True
+Student
+First name;Middle names;Last name;ID
+David;Honza,Terka,Honza;Petera;86
+Janitor
+First name;Middle names;Last name;ID;Owns broom
+Marcela;;Vomáčková;1;False
