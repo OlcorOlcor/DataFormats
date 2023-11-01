@@ -27,15 +27,9 @@ ex:universityID a rdf:Property ;
     rdfs:range xsd:int .
 
 
-
 ex:Dormitory a rdfs:Class ;
     rdfs:label "Dormitory"@en ;
     rdfs:comment "Class representing the dormitory building." .
-
-ex:dormitoryName a rdf:Property ;
-    rdfs:label "Name of the dormitory."@en ;
-    rdfs:domain ex:Dormitory ;
-    rdfs:range rdf:langString .
 
 ex:dormitoryAddress a rdf:Property ;
     rdfs:label "Address of the dormitory."@en ;
