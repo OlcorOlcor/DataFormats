@@ -7,19 +7,14 @@
 @prefix ex: <http://example.org/vocabulary/> .
 @prefix data: <http://www.our-example-data.org/> .
 @prefix uni: <http://www.our-example-data.org/university> .
-
-uni:Cambridge rdf:type ex:University ;
-    dcterms:title "Cambridge" ;
-    ex:universityID 1 ;
-    foaf:homepage <https://www.cam.ac.uk/> .
-
-<https://www.cam.ac.uk/> a foaf:Document ;
-    foaf:name "Cambridge"@en .
-
+@prefix dorm: <http://www.our-example-data.org/dormitory> .
+@prefix droom: <http://www.our-example-data.org/dorm-room> .
+@prefix stud: <http://www.our-example-data.org/student> .
+@prefix jani: <http://www.our-example-data.org/janitor> .
 
 ex:University a rdfs:Class ;
     rdfs:label "University"@en ;
-    rdfs:comment "Class representing a simple university." .
+    rdfs:comment "Class representing a simple university."@en .
 
 ex:universityID a rdf:Property ;
     rdfs:label "ID of the university."@en ;
@@ -29,15 +24,20 @@ ex:universityID a rdf:Property ;
 
 ex:Dormitory a rdfs:Class ;
     rdfs:label "Dormitory"@en ;
-    rdfs:comment "Class representing the dormitory building." .
+    rdfs:comment "Class representing the dormitory building."@en .
 
 ex:dormitoryAddress a rdf:Property ;
     rdfs:label "Address of the dormitory."@en ;
     rdfs:domain ex:Dormitory ;
-    rdfs:range rdf:langString .
+    rdfs:range xsd:string .
+
+ex:hasBedBugs a rdfs:Property ;
+    rdfs:comment "If dormitory has bed bugs."@en ;
+    rdfs:domain ex:Dormitory ;
+    rdfs:range xsd:boolean .
 
 ex:belongsTo a rdf:Property ;
-    rdfs:label "Signifies that dormitory belongs to a university." ;
+    rdfs:label "Signifies that dormitory belongs to a university."@en ;
     rdfs:domain ex:Dormitory ;
     rdfs:range ex:University .
 
@@ -45,41 +45,109 @@ ex:belongsTo a rdf:Property ;
 
 ex:DormRoom a rdfs:Class ;
     rdfs:label "Dorm room"@en ;
-    rdfs:comment "Class representing a room in the dormitory." .
+    rdfs:comment "Class representing a room in the dormitory."@en .
+
+ex:floor a rdf:Property ;
+    rdfs:label "Floor number of the room counted from zero."@en ;
+    rdfs:domain ex:DormRoom ;
+    rdfs:range xsd:int .
+
+ex:number a rdf:Property ;
+    rdfs:label "Unique number of the room."@en ;
+    rdfs:domain ex:DormRoom ;
+    rdfs:range xsd:int .
+
+ex:capacity a rdf:Property ;
+    rdfs:label "Capacity of the room."@en ;
+    rdfs:domain ex:DormRoom ;
+    rdfs:range xsd:int .
+
+ex:hasToilet a rdf:Property ;
+    rdfs:label "Boolean if the room has toilet."@en ;
+    rdfs:domain ex:DormRoom ;
+    rdfs:range xsd:boolean .
 
 ex:isIn a rdf:Property ;
-    rdfs:label "Signifies that dorm room is in a dormitory." ;
+    rdfs:label "Signifies that dorm room is in a dormitory."@en ;
     rdfs:domain ex:DormRoom ;
     rdfs:range ex:Dormitory .
 
 
 ex:Person a rdfs:Class ;
     rdfs:label "Person"@en ;
-    rdfs:comment "Class representing a person in the system." .
+    rdfs:comment "Class representing a person in the system."@en .
 
 
 ex:Janitor rdfs:subClassOf ex:Person ;
     rdfs:label "Janitor"@en ;
-    rdfs:comment "Class representing a simple janitor in the system. The class is derived from the class Person and has all the properties of it." .
+    rdfs:comment "Class representing a simple janitor in the system. The class is derived from the class Person and has all the properties of it."@en .
+
+ex:ownsBroom a rdfs:Property ;
+    rdfs:comment "If janitor owns a broom."@en ;
+    rdfs:domain ex:Janitor ;
+    rdfs:range xsd:boolean .
 
 ex:worksIn a rdf:Property ;
-    rdfs:label "Signifies that janitor works in a dormitory." ;
+    rdfs:label "Signifies that janitor works in a dormitory."@en ;
     rdfs:domain ex:Janitor ;
     rdfs:range ex:Dormitory .
 
 
 ex:Student rdfs:subClassOf ex:Person ;
     rdfs:label "Student"@en ;
-    rdfs:comment "Class representing a student in the system. The class is derived from the class Person and has all the properties of it." .
+    rdfs:comment "Class representing a student in the system. The class is derived from the class Person and has all the properties of it."@en .
 
 ex:staysIn a rdf:Property ;
-    rdfs:label "Signifies that student stays in a dorm room." ;
+    rdfs:label "Signifies that student stays in a dorm room."@en ;
     rdfs:domain ex:Student ;
     rdfs:range ex:DormRoom .
 
 ex:studiesAt a rdf:Property ;
-    rdfs:label "Signifies that student studies at an university." ;
+    rdfs:label "Signifies that student studies at an university."@en ;
     rdfs:domain ex:Student ;
     rdfs:range ex:University .
+
+
+
+uni:Cambridge a ex:University ;
+    dcterms:title "Cambridge"@en ;
+    ex:universityID 1 ;
+    foaf:homepage <https://www.cam.ac.uk/> .
+
+<https://www.cam.ac.uk/> a foaf:Document ;
+    foaf:name "Cambridge"@en .
+
+uni:CharlesUniversity a ex:University ;
+    dcterms:title "Charles university"@en ;
+    ex:universityID 2 ; 
+    foaf:homepage <https://cuni.cz/> .
+
+<https://cuni.cz/> a foaf:Document ;
+    foaf:name "CharlesUniversity"@en .
+
+uni:Harvard a ex:University ;
+    dcterms:title "Harvard"@en ;
+    ex:universityID 3 ;
+    foaf:homepage <https://pll.harvard.edu/> . 
+
+<https://pll.harvard.edu/> a foaf:Document ;
+    foaf:name "Harvard"@en .
+
+dorm:17listopad a ex:Dormitory ;
+    ex:dormitoryAddress "Praha Pátkova 2136/3" ;
+    dcterms:title "17. Listopadu"@cs ;
+    ex:hasBedBugs False ;
+    ex:belongsTo uni:CharlesUniversity .
+
+dorm:Strahov a ex:Dormitory ;
+    ex:dormitoryAddress "Praha Vaníčkova 315/7" ;
+    dcterms:title "Strahov"@cs ;
+    ex:hasBedBugs True .
+
+dorm:CambridgeDrom a ex:Dormitory ;
+    ex:dormitoryAddress "Cambridge O'Brians street" ;
+    dcterms:title "Cambridge Dromitory"@en ;
+    ex:hasBedBugs False ;
+    ex:belongsTo uni:Cambridge .
 
 
