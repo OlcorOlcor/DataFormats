@@ -73,12 +73,12 @@ ex:isIn a rdf:Property ;
     rdfs:range ex:Dormitory .
 
 
-ex:Person a rdfs:Class ;
-    rdfs:label "Person"@en ;
-    rdfs:comment "Class representing a person in the system."@en .
+ex:middleName a rdf:Property ;
+    rdfs:label "Adds middle name to standard foaf Person class."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:string .
 
-
-ex:Janitor rdfs:subClassOf ex:Person ;
+ex:Janitor rdfs:subClassOf foaf:Person ;
     rdfs:label "Janitor"@en ;
     rdfs:comment "Class representing a simple janitor in the system. The class is derived from the class Person and has all the properties of it."@en .
 
@@ -93,7 +93,7 @@ ex:worksIn a rdf:Property ;
     rdfs:range ex:Dormitory .
 
 
-ex:Student rdfs:subClassOf ex:Person ;
+ex:Student rdfs:subClassOf foaf:Person ;
     rdfs:label "Student"@en ;
     rdfs:comment "Class representing a student in the system. The class is derived from the class Person and has all the properties of it."@en .
 
@@ -136,18 +136,18 @@ uni:Harvard a ex:University ;
 dorm:17listopad a ex:Dormitory ;
     ex:dormitoryAddress "Praha Pátkova 2136/3" ;
     dcterms:title "17. Listopadu"@cs ;
-    ex:hasBedBugs False ;
+    ex:hasBedBugs false ;
     ex:belongsTo uni:CharlesUniversity .
 
 dorm:Strahov a ex:Dormitory ;
     ex:dormitoryAddress "Praha Vaníčkova 315/7" ;
     dcterms:title "Strahov"@cs ;
-    ex:hasBedBugs True .
+    ex:hasBedBugs true .
 
-dorm:CambridgeDrom a ex:Dormitory ;
+dorm:CambridgeDorm a ex:Dormitory ;
     ex:dormitoryAddress "Cambridge O'Brians street" ;
-    dcterms:title "Cambridge Dromitory"@en ;
-    ex:hasBedBugs False ;
+    dcterms:title "Cambridge Dormitory"@en ;
+    ex:hasBedBugs false ;
     ex:belongsTo uni:Cambridge .
 
 
@@ -155,19 +155,37 @@ droom:CambridgeDorm421 a ex:DormRoom ;
     ex:floor 42 ;
     ex:number 421 ;
     ex:capacity 4 ;
-    ex:hasToilet True ;
+    ex:hasToilet true ;
     ex:isIn dorm:CambridgeDrom .
 
 droom:Strahov10 a ex:DormRoom ;
     ex:floor 0 ;
     ex:number 10 ;
     ex:capacity 2 ;
-    ex:hasToilet False ;
+    ex:hasToilet false ;
     ex:isIn dorm:Strahov .
 
 droom:17listopad1000 a ex:DormRoom ;
     ex:floor 100 ;
     ex:number 1000 ;
     ex:capacity 3 ;
-    ex:hasToilet True ;
+    ex:hasToilet true ;
     ex:isIn dorm:17listopad .
+
+jani:Marcela a ex:Janitor ;
+    foaf:firstName "Marcela" ;
+    foaf:lastName "Vomáčková" ;
+    foaf:ID 1 ;
+    ex:ownsBroom false ;
+    ex:worksIn uni:Harvard ;
+    ex:worksIn uni:CharlesUniversity .
+
+stud:David a ex:Student ;
+    foaf:firstName "David" ;
+    ex:middleName "Honza" ;
+    ex:middleName "Terka" ;
+    ex:middleName "Honza" ;
+    foaf:lastName "Petera" ;
+    foaf:ID 86 ;
+    ex:staysIn dorm:17listopad ;
+    ex:studiesAt uni:CharlesUniversity .
