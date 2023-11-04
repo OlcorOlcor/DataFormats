@@ -151,3 +151,23 @@ dorm:CambridgeDrom a ex:Dormitory ;
     ex:belongsTo uni:Cambridge .
 
 
+droom:CambridgeDorm421 a ex:DormRoom ;
+    ex:floor 42 ;
+    ex:number 421 ;
+    ex:capacity 4 ;
+    ex:hasToilet True ;
+    ex:isIn dorm:CambridgeDrom .
+
+droom:Strahov10 a ex:DormRoom ;
+    ex:floor 0 ;
+    ex:number 10 ;
+    ex:capacity 2 ;
+    ex:hasToilet False ;
+    ex:isIn dorm:Strahov .
+
+droom:17listopad1000 a ex:DormRoom ;
+    ex:floor 100 ;
+    ex:number 1000 ;
+    ex:capacity 3 ;
+    ex:hasToilet True ;
+    ex:isIn dorm:17listopad .
