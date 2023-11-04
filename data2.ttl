@@ -52,5 +52,8 @@ uni:CharlesUniversity rdf:type ex:University ;
 uni:Harvard rdf:type ex:University ;
     ex:universityName "Harvard" ;
     ex:universityID 1 ;
-    ex:universityWebPage <https://pll.harvard.edu/> .
+    ex:universityWebPage <https://pll.harvard.edu/> . 
+
+<https://pll.harvard.edu/> a foaf:Document ;
+    foaf:name "Harvard"@en .
 

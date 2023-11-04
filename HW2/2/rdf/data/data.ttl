@@ -36,22 +36,50 @@ ex:dormitoryAddress a rdf:Property ;
     rdfs:domain ex:Dormitory ;
     rdfs:range rdf:langString .
 
+ex:belongsTo a rdf:Property ;
+    rdfs:label "Signifies that dormitory belongs to a university." ;
+    rdfs:domain ex:Dormitory ;
+    rdfs:range ex:University .
+
+
 
 ex:DormRoom a rdfs:Class ;
     rdfs:label "Dorm room"@en ;
     rdfs:comment "Class representing a room in the dormitory." .
+
+ex:isIn a rdf:Property ;
+    rdfs:label "Signifies that dorm room is in a dormitory." ;
+    rdfs:domain ex:DormRoom ;
+    rdfs:range ex:Dormitory .
 
 
 ex:Person a rdfs:Class ;
     rdfs:label "Person"@en ;
     rdfs:comment "Class representing a person in the system." .
 
+
 ex:Janitor rdfs:subClassOf ex:Person ;
     rdfs:label "Janitor"@en ;
     rdfs:comment "Class representing a simple janitor in the system. The class is derived from the class Person and has all the properties of it." .
 
+ex:worksIn a rdf:Property ;
+    rdfs:label "Signifies that janitor works in a dormitory." ;
+    rdfs:domain ex:Janitor ;
+    rdfs:range ex:Dormitory .
+
+
 ex:Student rdfs:subClassOf ex:Person ;
     rdfs:label "Student"@en ;
     rdfs:comment "Class representing a student in the system. The class is derived from the class Person and has all the properties of it." .
+
+ex:staysIn a rdf:Property ;
+    rdfs:label "Signifies that student stays in a dorm room." ;
+    rdfs:domain ex:Student ;
+    rdfs:range ex:DormRoom .
+
+ex:studiesAt a rdf:Property ;
+    rdfs:label "Signifies that student studies at an university." ;
+    rdfs:domain ex:Student ;
+    rdfs:range ex:University .
 
 
