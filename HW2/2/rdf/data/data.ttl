@@ -156,7 +156,7 @@ droom:CambridgeDorm421 a ex:DormRoom ;
     ex:number 421 ;
     ex:capacity 4 ;
     ex:hasToilet true ;
-    ex:isIn dorm:CambridgeDrom .
+    ex:isIn dorm:CambridgeDorm .
 
 droom:Strahov10 a ex:DormRoom ;
     ex:floor 0 ;
