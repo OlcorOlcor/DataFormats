@@ -1,4 +1,4 @@
-# list fisrt 10 dorm rooms in floors 10 and higher (shows just 2, not enough data)
+# list first 10 dorm rooms in floors 10 and higher (shows just 2, not enough data)
 
 PREFIX ex: <http://example.org/vocabulary/>
 

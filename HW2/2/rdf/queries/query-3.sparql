@@ -1,4 +1,4 @@
-# count all students that lives in dormitories, that doesn't contains bed bugs
+# count all students that live in dormitories, that don't contain bed bugs
 
 PREFIX ex: <http://example.org/vocabulary/>
 

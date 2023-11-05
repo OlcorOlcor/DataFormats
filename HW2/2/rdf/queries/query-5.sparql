@@ -1,4 +1,4 @@
-# list all universities with names starting with letter C
+# list all universities with names starting with the letter C
 
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX ex: <http://example.org/vocabulary/>
