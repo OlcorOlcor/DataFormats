@@ -10,9 +10,9 @@ CREATE // DormRooms
     (d3:DormRoom {Floor: 42, Number: 421, Capacity: 4, HasToilet: 1})
 
 CREATE // Universities
-    (Cambridge:University {Name: "Cambridge", id: 2, webPage: "https://www.cam.ac.uk"}),
+    (Cambridge:University {Name: "Cambridge", id: 1, webPage: "https://www.cam.ac.uk"}),
     (Harvard:University {Name: "Harvard", id: 3, webPage: "https://pll.harvard.edu"}),
-    (cuni:University {Name: "Charles University", id: 1, webPage: "https://cuni.cz"})    
+    (cuni:University {Name: "Charles University", id: 2, webPage: "https://cuni.cz"})    
 
 CREATE // Janitors
     (Marcela:Janitor {FirstName: "Marcela", LastName: "Vomáčková", id: 1, OwnsBroom: 0})
@@ -29,7 +29,7 @@ CREATE //Relations
 (d2)-[:IS_IN]->(seventeen),
 (d3)-[:IS_IN]->(CambridgeDormitory),
 (David)-[:STUDIES_AT]->(cuni),
-(David)-[:STAYS_IN]->(d1),
+(David)-[:STAYS_IN]->(d2),
 (Marcela)-[:WORKS_IN]->(CambridgeDormitory),
 (Marcela)-[:WORKS_IN]->(Strahov)
 
