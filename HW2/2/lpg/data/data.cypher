@@ -28,8 +28,8 @@ CREATE //Relations
 (d1)-[:IS_IN]->(Strahov),
 (d2)-[:IS_IN]->(seventeen),
 (d3)-[:IS_IN]->(CambridgeDormitory),
-(David)-[:STUDIES_AT]->(cuni),
-(David)-[:STAYS_IN]->(d2),
-(Marcela)-[:WORKS_IN]->(CambridgeDormitory),
-(Marcela)-[:WORKS_IN]->(Strahov)
+(David)-[:STUDIES_AT {since: "2021-10-01"}]->(cuni),
+(David)-[:STAYS_IN]->(d1),
+(Marcela)-[:WORKS_IN {since: "1900-01-01"}]->(CambridgeDormitory),
+(Marcela)-[:WORKS_IN {since: "2023-11-05"}]->(Strahov)
 
