@@ -1,0 +1,13 @@
+# count all students that lives in dormitories, that doesn't contains bed bugs
+
+PREFIX ex: <http://example.org/vocabulary/>
+
+SELECT (COUNT(DISTINCT ?student) AS ?studentCount)
+WHERE {
+  ?student a ex:Student ;
+        	ex:staysIn ?dormitory .
+  ?dormitory a ex:Dormitory ;
+  		    ex:hasBedBugs ?hasBugs .
+  FILTER (?hasBugs = false)
+}
+GROUP BY ?student

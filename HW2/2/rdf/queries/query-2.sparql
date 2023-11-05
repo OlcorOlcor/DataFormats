@@ -1,0 +1,16 @@
+# list all janitors that works in more than one dormitory and doesn't own a broom
+
+PREFIX ex: <http://example.org/vocabulary/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?janitor ?firstName ?lastName ?ID (COUNT(DISTINCT ?dormitory) AS ?dormitoryCount)
+WHERE {
+  ?janitor a ex:Janitor ;
+    		foaf:firstName ?firstName ;
+    		foaf:lastName ?lastName ;
+    		foaf:ID ?ID ;
+      		ex:ownsBroom ?ownsBroom ;
+        	ex:worksIn ?dormitory .
+  FILTER (?ownsBroom = false)
+}
+GROUP BY ?janitor ?firstName ?lastName ?ID

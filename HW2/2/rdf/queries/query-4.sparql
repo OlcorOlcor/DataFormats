@@ -1,0 +1,15 @@
+# list fisrt 10 dorm rooms in floors 10 and higher (shows just 2, not enough data)
+
+PREFIX ex: <http://example.org/vocabulary/>
+
+SELECT *
+WHERE {
+  ?student a ex:DormRoom ;
+  		ex:number ?roomNumber ;
+    	ex:capacity ?capacity ;
+    	ex:hasToilet ?hasToilet ;
+    	ex:isIn ?dorm ;
+        ex:floor ?floor .
+  FILTER (?floor >= 10)
+}
+LIMIT 10

@@ -1,0 +1,16 @@
+# show all dormitories with all data available
+
+PREFIX ex: <http://example.org/vocabulary/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT *
+WHERE {
+  ?dormitory a ex:Dormitory ;
+    		 dcterms:title ?title ;
+             ex:dormitoryAddress ?address ;
+             ex:hasBedBugs ?hasBadBugs .
+  OPTIONAL {
+  		?dormitory ex:belongsTo ?belongsTo .
+  }
+}

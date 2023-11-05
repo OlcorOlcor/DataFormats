@@ -1,0 +1,14 @@
+# list all universities with names starting with letter C
+
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ex: <http://example.org/vocabulary/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT *
+WHERE {
+  ?university a ex:University ;
+  		dcterms:title ?title ;
+  		ex:universityID ?ID ;
+    	foaf:homepage ?webPage .
+  FILTER (STRSTARTS(STR(?title), "C"))
+}
