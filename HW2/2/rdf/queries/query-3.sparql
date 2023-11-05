@@ -1,4 +1,4 @@
-# count all students that live in dormitories, that contain bed bugs
+# count all students that live in dormitories, that don't contain bed bugs
 
 PREFIX ex: <http://example.org/vocabulary/>
 
@@ -8,6 +8,6 @@ WHERE {
         	ex:staysIn ?dormitory .
   ?dormitory a ex:Dormitory ;
   		    ex:hasBedBugs ?hasBugs .
-  FILTER (?hasBugs = true)
+  FILTER (?hasBugs = false)
 }
 GROUP BY ?student
