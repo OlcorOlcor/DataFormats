@@ -177,8 +177,8 @@ jani:Marcela a ex:Janitor ;
     foaf:lastName "Vomáčková" ;
     foaf:ID 1 ;
     ex:ownsBroom false ;
-    ex:worksIn uni:Harvard ;
-    ex:worksIn uni:CharlesUniversity .
+    ex:worksIn uni:CambridgeDorm ;
+    ex:worksIn uni:Strahov .
 
 stud:David a ex:Student ;
     foaf:firstName "David" ;
@@ -187,5 +187,5 @@ stud:David a ex:Student ;
     ex:middleName "Honza" ;
     foaf:lastName "Petera" ;
     foaf:ID 86 ;
-    ex:staysIn dorm:17listopad ;
+    ex:staysIn droom:17listopad1000 ;
     ex:studiesAt uni:CharlesUniversity .
