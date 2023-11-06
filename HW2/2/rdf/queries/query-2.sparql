@@ -8,7 +8,7 @@ WHERE {
   ?janitor a ex:Janitor ;
     		foaf:firstName ?firstName ;
     		foaf:lastName ?lastName ;
-    		foaf:ID ?ID ;
+    		ex:personID ?ID ;
       		ex:ownsBroom ?ownsBroom ;
         	ex:worksIn ?dormitory .
   FILTER (?ownsBroom = false)

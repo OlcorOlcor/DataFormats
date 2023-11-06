@@ -73,10 +73,15 @@ ex:isIn a rdf:Property ;
     rdfs:range ex:Dormitory .
 
 
+ex:personID a rdf:Property ;
+    rdfs:label "Adds integer id to standard foaf Person class."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:int .
+
 ex:middleName a rdf:Property ;
     rdfs:label "Adds middle name to standard foaf Person class."@en ;
     rdfs:domain foaf:Person ;
-    rdfs:range xsd:string .
+    rdfs:range rdf:langString .
 
 ex:Janitor rdfs:subClassOf foaf:Person ;
     rdfs:label "Janitor"@en ;
@@ -156,36 +161,41 @@ droom:CambridgeDorm421 a ex:DormRoom ;
     ex:number 421 ;
     ex:capacity 4 ;
     ex:hasToilet true ;
-    ex:isIn dorm:CambridgeDorm .
+    ex:isIn dorm:CambridgeDorm ;
+    rdfs:label "Cambridge Dorm room number 421"@en .
 
 droom:Strahov10 a ex:DormRoom ;
     ex:floor 0 ;
     ex:number 10 ;
     ex:capacity 2 ;
     ex:hasToilet false ;
-    ex:isIn dorm:Strahov .
+    ex:isIn dorm:Strahov ;
+    rdfs:label "Strahov Dorm room number 10"@en .
 
 droom:17listopad1000 a ex:DormRoom ;
     ex:floor 100 ;
     ex:number 1000 ;
     ex:capacity 3 ;
     ex:hasToilet true ;
-    ex:isIn dorm:17listopad .
+    ex:isIn dorm:17listopad ;
+    rdfs:label "17Listopad Dorm room number 1000"@en .
 
 jani:Marcela a ex:Janitor ;
-    foaf:firstName "Marcela" ;
-    foaf:lastName "Vomáčková" ;
-    foaf:ID 1 ;
+    foaf:firstName "Marcela"@cs ;
+    foaf:lastName "Vomáčková"@cs ;
+    ex:personID 1 ;
     ex:ownsBroom false ;
     ex:worksIn uni:CambridgeDorm ;
-    ex:worksIn uni:Strahov .
+    ex:worksIn uni:Strahov ;
+    rdfs:label "Janitor Marcela Vomáčková"@en .
 
 stud:David a ex:Student ;
-    foaf:firstName "David" ;
-    ex:middleName "Honza" ;
-    ex:middleName "Terka" ;
-    ex:middleName "Honza" ;
-    foaf:lastName "Petera" ;
-    foaf:ID 86 ;
+    foaf:firstName "David"@cs ;
+    ex:middleName "Honza"@cs ;
+    ex:middleName "Terka"@cs ;
+    ex:middleName "Honza"@cs ;
+    foaf:lastName "Petera"@cs ;
+    ex:personID 86 ;
     ex:staysIn droom:17listopad1000 ;
-    ex:studiesAt uni:CharlesUniversity .
+    ex:studiesAt uni:CharlesUniversity ;
+    rdfs:label "Student David Petera"@en .
