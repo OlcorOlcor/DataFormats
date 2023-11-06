@@ -19,7 +19,7 @@ ex:University a rdfs:Class ;
 ex:universityID a rdf:Property ;
     rdfs:label "ID of the university."@en ;
     rdfs:domain ex:University ;
-    rdfs:range xsd:int .
+    rdfs:range xsd:integer .
 
 
 ex:Dormitory a rdfs:Class ;
@@ -50,17 +50,17 @@ ex:DormRoom a rdfs:Class ;
 ex:floor a rdf:Property ;
     rdfs:label "Floor number of the room counted from zero."@en ;
     rdfs:domain ex:DormRoom ;
-    rdfs:range xsd:int .
+    rdfs:range xsd:integer .
 
 ex:number a rdf:Property ;
     rdfs:label "Unique number of the room."@en ;
     rdfs:domain ex:DormRoom ;
-    rdfs:range xsd:int .
+    rdfs:range xsd:integer .
 
 ex:capacity a rdf:Property ;
     rdfs:label "Capacity of the room."@en ;
     rdfs:domain ex:DormRoom ;
-    rdfs:range xsd:int .
+    rdfs:range xsd:integer .
 
 ex:hasToilet a rdf:Property ;
     rdfs:label "Boolean if the room has toilet."@en ;
@@ -76,7 +76,7 @@ ex:isIn a rdf:Property ;
 ex:personID a rdf:Property ;
     rdfs:label "Adds integer id to standard foaf Person class."@en ;
     rdfs:domain foaf:Person ;
-    rdfs:range xsd:int .
+    rdfs:range xsd:integer .
 
 ex:middleName a rdf:Property ;
     rdfs:label "Adds middle name to standard foaf Person class."@en ;
