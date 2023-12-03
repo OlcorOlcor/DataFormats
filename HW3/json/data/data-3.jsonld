@@ -1,6 +1,35 @@
 {
-    "FirstName": "Marcela",
-    "LastName": "Vomáčková",
+    "@context": {
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "jani": "http://www.our-example-data.org/janitor",
+        "ex": "http://example.org/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+        "FirstName": {
+            "@id": "foaf:firstName",
+            "@container": "@language"
+        },
+        "LastName": {
+            "@id": "foaf:lastName",
+            "@container": "@language"
+        },
+        "id": {
+            "@id": "ex:personID",
+            "@type": "xsd:integer"
+        },
+        "OwnsBroom": {
+            "@id": "ex:ownsBroom",
+            "@type": "xsd:boolean"
+        }
+    },
+    "@id": "jani:Marcela",
+    "@type": "ex:Janitor",
+    "FirstName": {
+        "cs": "Marcela"
+    },
+    "LastName": {
+        "cs": "Vomáčková"
+    },
     "id": 1,
     "OwnsBroom": true
 }
