@@ -25,7 +25,7 @@
             "type": "integer",
             "exclusiveMinimum": 0
         },
-        "universities": {
+        "Universities": {
             "description": "The universities where the student studies at",
             "type": "array",
             "items": {
@@ -33,5 +33,5 @@
             }
         }
     },
-    "required": ["FirstName", "LastName", "id", "university"]
+    "required": ["FirstName", "LastName", "id", "Universities"]
 }

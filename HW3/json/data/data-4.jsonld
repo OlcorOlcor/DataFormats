@@ -1,0 +1,13 @@
+{
+    "FirstName": "David",
+    "MiddleName": ["Honza", "Terka", "Honza"],
+    "LastName": "Petera",
+    "id": 86,
+    "Universities": [
+        {
+            "Name": "Charles University",
+            "id": 2,
+            "webPage": "https://cuni.cz"
+        }
+    ]
+}

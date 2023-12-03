@@ -20,5 +20,5 @@
             "format": "uri"
         }
     },
-    "required": ["id", "title", "webPage"]
+    "required": ["id", "Name", "webPage"]
 }

@@ -1,0 +1,18 @@
+{
+    "address": "Praha Pátkova 2136/3",
+    "Name": "17. Listopadu",
+    "hasBedBugs": false,
+    "University": {
+        "Name": "Charles University",
+        "id": 2,
+        "webPage": "https://cuni.cz"
+    },
+    "DormRooms": [
+        {
+            "Floor": 100,
+            "Number": 1000,
+            "Capacity": 3,
+            "HasToilet": true
+        }
+    ]
+}

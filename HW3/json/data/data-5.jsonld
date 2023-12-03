@@ -1,0 +1,41 @@
+{
+    "address": "Praha Vaníčkova 315/7",
+    "Name": "Strahov",
+    "hasBedBugs": true,
+    "University": {
+        "Name": "Charles University",
+        "id": 2,
+        "webPage": "https://cuni.cz"
+    },
+    "Janitors": [
+        {
+            "FirstName": "Marcela",
+            "LastName": "Vomáčková",
+            "id": 1,
+            "OwnsBroom": true
+        }
+    ],
+    "DormRooms": [
+        {
+            "Floor": 0,
+            "Number": 10,
+            "Capacity": 2,
+            "HasToilet": false,
+            "Students": [
+                {
+                    "FirstName": "David",
+                    "MiddleName": ["Honza", "Terka", "Honza"],
+                    "LastName": "Petera",
+                    "id": 86,
+                    "Universities": [
+                        {
+                            "Name": "Charles University",
+                            "id": 2,
+                            "webPage": "https://cuni.cz"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

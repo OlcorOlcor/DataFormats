@@ -1,0 +1,26 @@
+{
+    "address": "Cambridge O'Brians street",
+    "Name": "Cambridge Dormitory",
+    "hasBedBugs": false,
+    "University": {
+        "Name": "Cambridge",
+        "id": 1,
+        "webPage": "https://www.cam.ac.uk"
+    },
+    "Janitors": [
+        {
+            "FirstName": "Marcela",
+            "LastName": "Vomáčková",
+            "id": 1,
+            "OwnsBroom": true
+        }
+    ],
+    "DormRooms": [
+        {
+            "Floor": 42,
+            "Number": 421,
+            "Capacity": 4,
+            "HasToilet": true
+        }
+    ]
+}

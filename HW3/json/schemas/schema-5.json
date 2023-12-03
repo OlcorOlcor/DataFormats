@@ -64,5 +64,5 @@
             }
         }
     },
-    "required": ["adress", "Name", "hasBedBugs"]
+    "required": ["address", "Name", "hasBedBugs"]
 }
