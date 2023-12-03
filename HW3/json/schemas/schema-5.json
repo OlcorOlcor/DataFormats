@@ -1,0 +1,68 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://www.our-example-data.org/dormitory.json",
+    "title": "dormitory",
+    "description": "A dormitory",
+    "type": "object",
+    "properties": {
+        "address": {
+            "description": "Adress of the dormitory",
+            "type": "string"
+        },
+        "Name": {
+            "description": "Name of the dormitory",
+            "type": "string"
+        },
+        "hasBedBugs": {
+            "description": "Whether the dormitory has bed bugs",
+            "type": "boolean"
+        },
+        "University": {
+            "description": "To which university the dormitory belongs to",
+            "$ref": "http://www.our-example-data.org/university.json"
+        },
+        "Janitors": {
+            "description": "List of janitors the dormitory employs",
+            "type": "array",
+            "items": {
+                "$ref": "http://www.our-example-data.org/janitor.json"
+            }
+        },
+        "DormRooms": {
+            "description": "List of dorm rooms the dormitory contains",
+            "type": "array",
+            "items": {
+                "description": "A dorm room",
+                "type": "object",
+                "properties": {
+                    "Floor": {
+                        "description": "On what floor the dorm room is located",
+                        "type": "integer"
+                    },
+                    "Number": {
+                        "description": "Room number", 
+                        "type": "integer"
+                    },
+                    "Capacity": {
+                        "description": "How many people can live in the dorm room",
+                        "type": "integer",
+                        "exclusiveMinimum": 0
+                    },
+                    "HasToilet": {
+                        "description": "Whether the dorm room has its own toilet",
+                        "type": "boolean"
+                    },
+                    "Students": {
+                        "description": "List of students living in the dorm room",
+                        "type": "array",
+                        "items": {
+                            "$ref": "http://www.our-example-data.org/student-uni.json"
+                        }
+                    }
+                },
+                "required": ["Floor", "Number", "Capacity", "HasToilet"]
+            }
+        }
+    },
+    "required": ["adress", "Name", "hasBedBugs"]
+}

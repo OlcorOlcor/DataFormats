@@ -1,0 +1,37 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://www.our-example-data.org/student-uni.json",
+    "title": "Student on university",
+    "description": "A student",
+    "type": "object",
+    "properties": {
+        "FirstName": {
+            "description": "First name of the student",
+            "type": "string"
+        },
+        "MiddleName": {
+            "description": "Middle name(s) of the student",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "LastName": {
+            "description": "Last name of the student",
+            "type": "string"
+        },
+        "id": {
+            "description": "Unique identifier of the student",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "universities": {
+            "description": "The universities where the student studies at",
+            "type": "array",
+            "items": {
+                "$ref": "http://www.our-example-data.org/university.json"
+            }
+        }
+    },
+    "required": ["FirstName", "LastName", "id", "university"]
+}

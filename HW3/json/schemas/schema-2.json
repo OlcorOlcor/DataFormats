@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://www.our-example-data.org/student.json",
+    "title": "Student",
+    "description": "A student",
+    "type": "object",
+    "properties": {
+        "FirstName": {
+            "description": "First name of the student",
+            "type": "string"
+        },
+        "MiddleName": {
+            "description": "Middle name(s) of the student",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "LastName": {
+            "description": "Last name of the student",
+            "type": "string"
+        },
+        "id": {
+            "description": "Unique identifier of the student",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        }
+    },
+    "required": ["FirstName", "LastName", "id"]
+}
