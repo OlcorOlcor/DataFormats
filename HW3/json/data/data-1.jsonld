@@ -1,5 +1,18 @@
-{
+{   
+    "@context": {
+        "id": {
+            "@id": "http://example.org/vocabulary/universityID",
+            "@type": "http://www.w3.org/2001/XMLSchema#/integer"
+        },
+        "Name": {
+            "@id": "http://purl.org/dc/terms/title",
+            "@container": "@language"
+        }
+    },
+    "@id": "http://www.our-example-data.org/university/Harvard",
     "id": 3,
-    "Name": "Harvard",
+    "Name": {
+        "en": "Harvard"
+    },
     "webPage": "https://pll.harvard.edu"
 }

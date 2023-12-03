@@ -12,7 +12,18 @@
         },
         "Name": {
             "description": "Name of the university",
-            "type": "string"
+            "type": "object",
+            "properties": {
+                "en": {
+                    "description": "Name of the university in english",
+                    "type": "string"
+                },
+                "cs": {
+                    "description": "Name of the university in czech",
+                    "type": "string"
+                }
+            },
+            "required": ["en"]
         },
         "webPage": {
             "description": "Webpage of the university",
