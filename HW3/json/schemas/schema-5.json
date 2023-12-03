@@ -6,7 +6,7 @@
     "type": "object",
     "properties": {
         "address": {
-            "description": "Adress of the dormitory",
+            "description": "Address of the dormitory",
             "type": "string"
         },
         "Name": {
