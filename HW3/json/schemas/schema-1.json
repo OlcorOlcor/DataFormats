@@ -27,8 +27,13 @@
         },
         "webPage": {
             "description": "Webpage of the university",
-            "type": "string",
-            "format": "uri"
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of the webpage resource",
+                    "type": "string"
+                }
+            }
         }
     },
     "required": ["id", "Name", "webPage"]

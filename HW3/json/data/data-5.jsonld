@@ -91,6 +91,9 @@
                     "@container": "@language"
                 },
                 "webPage": {
+                    "@context": {
+                        "url": "@id"
+                    },
                     "@id": "foaf:homepage"
                 },
                 "name": {
@@ -138,7 +141,7 @@
             "en": "Charles university"
         },
         "webPage": {
-            "@id": "https://cuni.cz/",
+            "url": "https://cuni.cz/",
             "@type": "foaf:Document",
             "name": {
                 "en": "CharlesUniversity"
@@ -192,7 +195,7 @@
                                 "en": "Charles university"
                             },
                             "webPage": {
-                                "@id": "https://cuni.cz/",
+                                "url": "https://cuni.cz/",
                                 "@type": "foaf:Document",
                                 "name": {
                                     "en": "CharlesUniversity"
