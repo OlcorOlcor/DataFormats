@@ -7,11 +7,11 @@ xmlns:jani="http://www.our-example-data.org/janitor/xsd"
 xmlns:stud="http://www.our-example-data.org/student/xsd"
 xmlns:uni="http://www.our-example-data.org/university/xsd">
     <address>Praha Pátkova 2136/3</address>
-    <Name>17. Listopadu</Name>
+    <Name xml:lang="cs">17. Listopadu</Name>
     <hasBedBugs>false</hasBedBugs>
     <uni:University>
         <uni:id>2</uni:id>
-        <uni:Name>Charles University</uni:Name>
+        <uni:Name xml:lang="en">Charles University</uni:Name>
         <uni:webPage>https://cuni.cz</uni:webPage>
     </uni:University>
     <Janitors></Janitors>

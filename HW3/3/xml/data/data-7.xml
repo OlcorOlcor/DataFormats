@@ -8,18 +8,18 @@ xmlns:jani="http://www.our-example-data.org/janitor/xsd"
 xmlns:stud="http://www.our-example-data.org/student/xsd"
 xmlns:uni="http://www.our-example-data.org/university/xsd">
     <address>Cambridge O'Brians street</address>
-    <Name>Cambridge Dormitory</Name>
+    <Name xml:lang="en">Cambridge Dormitory</Name>
     <hasBedBugs>false</hasBedBugs>
     <uni:University>
         <uni:id>1</uni:id>
-        <uni:Name>Cambridge</uni:Name>
+        <uni:Name xml:lang="en">Cambridge</uni:Name>
         <uni:webPage>https://www.cam.ac.uk</uni:webPage>
     </uni:University>
     <Janitors>
         <jani:Janitor>
-            <person:FirstName>Marcela</person:FirstName>
+            <person:FirstName xml:lang="cs">Marcela</person:FirstName>
             <person:MiddleNames></person:MiddleNames>
-            <person:LastName>Vomáčková</person:LastName>
+            <person:LastName xml:lang="cs">Vomáčková</person:LastName>
             <person:id>1</person:id>
             <jani:OwnsBroom>true</jani:OwnsBroom>
         </jani:Janitor>

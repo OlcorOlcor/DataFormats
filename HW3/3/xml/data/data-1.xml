@@ -4,6 +4,6 @@
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.our-example-data.org/university/xsd ../schemas/schema-1.xsd">
     <id>3</id>
-    <Name>Harvard</Name>
+    <Name xml:lang="en">Harvard</Name>
     <webPage>https://pll.harvard.edu</webPage>
 </University>

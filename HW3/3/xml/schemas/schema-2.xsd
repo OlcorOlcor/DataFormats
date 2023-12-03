@@ -1,16 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
 targetNamespace="http://www.our-example-data.org/person/xsd"
-elementFormDefault="qualified">
-    <xs:element name="FirstName" type="xs:string"/>
+elementFormDefault="qualified"
+xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+    <xs:element name="FirstName">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="xml:lang"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="MiddleNames">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="MiddleName" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="MiddleName" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute ref="xml:lang"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="LastName" type="xs:string"/>
+    <xs:element name="LastName">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="xml:lang"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
     <xs:element name="id">
         <xs:simpleType>
             <xs:restriction base="xs:integer">

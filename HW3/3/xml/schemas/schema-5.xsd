@@ -4,7 +4,9 @@ xmlns:uni="http://www.our-example-data.org/university/xsd"
 xmlns:jani="http://www.our-example-data.org/janitor/xsd"
 xmlns:stud="http://www.our-example-data.org/student/xsd"
 targetNamespace="http://www.our-example-data.org/dormitory/xsd" 
+xmlns:xml="http://www.w3.org/XML/1998/namespace"
 elementFormDefault="qualified">
+<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
 <xs:import namespace="http://www.our-example-data.org/university/xsd" schemaLocation="schema-1.xsd"/>
 <xs:import namespace="http://www.our-example-data.org/janitor/xsd" schemaLocation="schema-3.xsd"/>
 <xs:import namespace="http://www.our-example-data.org/student/xsd" schemaLocation="schema-4.xsd"/>
@@ -12,7 +14,15 @@ elementFormDefault="qualified">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="address" type="xs:string"/>
-                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="Name">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute ref="xml:lang"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
                 <xs:element name="hasBedBugs" type="xs:boolean"/>
                 <xs:element ref="uni:University" minOccurs="0" maxOccurs="1"/>
                 <xs:element name="Janitors">
