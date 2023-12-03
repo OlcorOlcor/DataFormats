@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns:uni="http://www.our-example-data.org/university/xsd"
+xmlns:jani="http://www.our-example-data.org/janitor/xsd"
+xmlns:stud="http://www.our-example-data.org/student/xsd"
+targetNamespace="http://www.our-example-data.org/dormitory/xsd" 
+elementFormDefault="qualified">
+<xs:import namespace="http://www.our-example-data.org/university/xsd" schemaLocation="schema-1.xsd"/>
+<xs:import namespace="http://www.our-example-data.org/janitor/xsd" schemaLocation="schema-3.xsd"/>
+<xs:import namespace="http://www.our-example-data.org/student/xsd" schemaLocation="schema-4.xsd"/>
+    <xs:element name="Dormitory">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="address" type="xs:string"/>
+                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="hasBedBugs" type="xs:boolean"/>
+                <xs:element ref="uni:University" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="Janitors">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="jani:Janitor" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DormRooms">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="DormRoom" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Floor" type="xs:integer"/>
+                                        <xs:element name="Number" type="xs:integer"/>
+                                        <xs:element name="Capacity">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minExclusive value="0"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="HasToilet" type="xs:boolean"/>
+                                        <xs:element name="Students">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element ref="stud:Student" minOccurs="0" maxOccurs="unbounded"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

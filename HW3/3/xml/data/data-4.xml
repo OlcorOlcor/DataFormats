@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Student xmlns="http://www.our-example-data.org/student/xsd"
+xmlns:uni="http://www.our-example-data.org/university/xsd" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.our-example-data.org/student/xsd ../schemas/schema-4.xsd"
+xmlns:person="http://www.our-example-data.org/person/xsd">
+    <person:FirstName>David</person:FirstName>
+    <person:MiddleNames>
+        <person:MiddleName>Honza</person:MiddleName>
+        <person:MiddleName>Terka</person:MiddleName>
+        <person:MiddleName>Honza</person:MiddleName>
+    </person:MiddleNames>
+    <person:LastName>Petera</person:LastName>
+    <person:id>86</person:id>
+    <Universities>
+        <uni:University>
+            <uni:id>2</uni:id>
+            <uni:Name>Charles University</uni:Name>
+            <uni:webPage>https://cuni.cz</uni:webPage>
+        </uni:University>
+    </Universities>
+</Student>

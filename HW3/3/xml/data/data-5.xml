@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Dormitory xmlns="http://www.our-example-data.org/dormitory/xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.our-example-data.org/dormitory/xsd ../schemas/schema-5.xsd"
+xmlns:person="http://www.our-example-data.org/person/xsd"
+xmlns:jani="http://www.our-example-data.org/janitor/xsd"
+xmlns:stud="http://www.our-example-data.org/student/xsd"
+xmlns:uni="http://www.our-example-data.org/university/xsd">
+    <address>Praha Vaníčkova 315/7</address>
+    <Name>Strahov</Name>
+    <hasBedBugs>true</hasBedBugs>
+    <uni:University>
+        <uni:id>2</uni:id>
+        <uni:Name>Charles University</uni:Name>
+        <uni:webPage>https://cuni.cz</uni:webPage>
+    </uni:University>
+    <Janitors>
+        <jani:Janitor>
+            <person:FirstName>Marcela</person:FirstName>
+            <person:MiddleNames></person:MiddleNames>
+            <person:LastName>Vomáčková</person:LastName>
+            <person:id>1</person:id>
+            <jani:OwnsBroom>true</jani:OwnsBroom>
+        </jani:Janitor>
+    </Janitors>
+    <DormRooms>
+        <DormRoom>
+            <Floor>0</Floor>
+            <Number>10</Number>
+            <Capacity>2</Capacity>
+            <HasToilet>false</HasToilet>
+            <Students>
+                <stud:Student>
+                    <person:FirstName>David</person:FirstName>
+                    <person:MiddleNames>
+                        <person:MiddleName>Honza</person:MiddleName>
+                        <person:MiddleName>Terka</person:MiddleName>
+                        <person:MiddleName>Honza</person:MiddleName>
+                    </person:MiddleNames>
+                    <person:LastName>Petera</person:LastName>
+                    <person:id>86</person:id>
+                    <stud:Universities>
+                        <uni:University>
+                            <uni:id>2</uni:id>
+                            <uni:Name>Charles University</uni:Name>
+                            <uni:webPage>https://cuni.cz</uni:webPage>
+                        </uni:University>
+                    </stud:Universities>
+                </stud:Student>
+            </Students>
+        </DormRoom>
+    </DormRooms>
+</Dormitory>

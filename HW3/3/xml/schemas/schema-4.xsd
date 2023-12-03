@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:uni="http://www.our-example-data.org/university/xsd"
+xmlns:person="http://www.our-example-data.org/person/xsd"
+targetNamespace="http://www.our-example-data.org/student/xsd" 
+elementFormDefault="qualified">
+<xs:import namespace="http://www.our-example-data.org/university/xsd" schemaLocation="schema-1.xsd"/>
+<xs:import namespace="http://www.our-example-data.org/person/xsd" schemaLocation="schema-2.xsd"/>
+    <xs:element name="Student">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="person:FirstName"/>
+                <xs:element ref="person:MiddleNames"/>
+                <xs:element ref="person:LastName"/>
+                <xs:element ref="person:id"/>
+                <xs:element name="Universities">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="uni:University" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
