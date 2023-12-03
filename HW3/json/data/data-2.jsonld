@@ -1,5 +1,6 @@
 {
-    "FirstName": "Maxmilián",
-    "LastName": "Úhledný",
-    "id": 123
+    "FirstName": "David",
+    "MiddleName": ["Honza", "Terka", "Honza"],
+    "LastName": "Petera",
+    "id": 86
 }
