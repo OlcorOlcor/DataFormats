@@ -121,6 +121,8 @@
         }
     },
 
+    "@id": "dorm:17listopad",
+    "@type": "ex:Dormitory",
     "address": {
         "cs": "Praha Pátkova 2136/3"
     },
