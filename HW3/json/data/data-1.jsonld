@@ -3,7 +3,7 @@
         "dcterms": "http://purl.org/dc/terms/",
         "foaf": "http://xmlns.com/foaf/0.1/",
         "ex": "http://example.org/vocabulary/",
-        "uni": "http://www.our-example-data.org/university",
+        "uni": "http://www.our-example-data.org/university/",
         "xsd": "http://www.w3.org/2001/XMLSchema#/",
 
         "id": {
@@ -15,6 +15,9 @@
             "@container": "@language"
         },
         "webPage": {
+            "@context": {
+                "url": "@id"
+            },
             "@id": "foaf:homepage"
         },
         "name": {
@@ -29,7 +32,7 @@
         "en": "Harvard"
     },
     "webPage": {
-        "@id": "https://pll.harvard.edu",
+        "url": "https://pll.harvard.edu",
         "@type": "foaf:Document",
         "name": {
             "en": "Harvard"

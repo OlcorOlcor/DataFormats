@@ -1,17 +1,18 @@
 {   
     "@context": {
         "foaf": "http://xmlns.com/foaf/0.1/",
-        "stud": "http://www.our-example-data.org/student",
+        "stud": "http://www.our-example-data.org/student/",
         "ex": "http://example.org/vocabulary/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#/",
 
         "FirstName": {
             "@id": "foaf:firstName",
             "@container": "@language"
         },
-        "MiddleName": {
+        "MiddleName": "@nest",
+        "name": {
             "@id": "ex:middleName",
-          	"@container": "@language"
+            "@container": "@language"
         },
         "LastName": {
             "@id": "foaf:lastName",
@@ -28,9 +29,15 @@
         "cs": "David"
     },
     "MiddleName": [
-      	{"cs": "Honza"}, 
-        {"cs": "Terka"},
-        {"cs": "Honza"}
+        {"name": {
+            "cs": "Honza"
+        }}, 
+        {"name": {
+            "cs": "Terka"
+        }},
+        {"name": {
+            "cs": "Honza"
+        }}
     ],
     "LastName": {
         "cs": "Petera"

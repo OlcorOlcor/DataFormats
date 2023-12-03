@@ -1,13 +1,13 @@
 {
     "@context": {
         "foaf": "http://xmlns.com/foaf/0.1/",
-        "stud": "http://www.our-example-data.org/student",
-        "uni": "http://www.our-example-data.org/university",
+        "stud": "http://www.our-example-data.org/student/",
+        "uni": "http://www.our-example-data.org/university/",
         "ex": "http://example.org/vocabulary/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#/",
         "dcterms": "http://purl.org/dc/terms/",
-        "droom": "http://www.our-example-data.org/dorm-room",
-        "jani": "http://www.our-example-data.org/janitor",
+        "droom": "http://www.our-example-data.org/dorm-room/",
+        "jani": "http://www.our-example-data.org/janitor/",
 
         "address": {
             "@id": "ex:dormitoryAddress",
@@ -61,9 +61,10 @@
                     "@id": "foaf:firstName",
                     "@container": "@language"
                 },
-                "MiddleName": {
+                "MiddleName": "@nest",
+                "name": {
                     "@id": "ex:middleName",
-                      "@container": "@language"
+                    "@container": "@language"
                 },
                 "LastName": {
                     "@id": "foaf:lastName",

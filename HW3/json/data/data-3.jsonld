@@ -1,9 +1,9 @@
 {
     "@context": {
         "foaf": "http://xmlns.com/foaf/0.1/",
-        "jani": "http://www.our-example-data.org/janitor",
+        "jani": "http://www.our-example-data.org/janitor/",
         "ex": "http://example.org/vocabulary/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#/",
 
         "FirstName": {
             "@id": "foaf:firstName",
