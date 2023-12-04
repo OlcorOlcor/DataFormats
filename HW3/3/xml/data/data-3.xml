@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Janitors xmlns="http://www.our-example-data.org/janitor/xsd" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.our-example-data.org/janitor/xsd ../schemas/schema-3.xsd"
+xmlns:person="http://www.our-example-data.org/person/xsd">
+    <Janitor>
+        <person:FirstName xml:lang="cs">Marcela</person:FirstName>
+        <person:MiddleNames></person:MiddleNames>
+        <person:LastName xml:lang="cs">Vomáčková</person:LastName>
+        <person:id>1</person:id>
+        <OwnsBroom>true</OwnsBroom>
+    </Janitor>
+</Janitors>

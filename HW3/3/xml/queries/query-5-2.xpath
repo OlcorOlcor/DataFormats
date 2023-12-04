@@ -1,0 +1,3 @@
+(: List all empty dormrooms in dormitories that have names in czech. :)
+
+//DormRoom[not(stud:Students/stud:Student) and ../../Name/@xml:lang='cs']

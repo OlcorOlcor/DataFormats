@@ -1,0 +1,3 @@
+(: List the first czech middlename of each person. :)
+
+//person:MiddleName[@xml:lang='cs'][1]/text()
