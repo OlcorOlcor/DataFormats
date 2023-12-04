@@ -11,18 +11,13 @@ xmlns:uni="http://www.our-example-data.org/university/xsd">
         <address>Praha Vaníčkova 315/7</address>
         <Name xml:lang="cs">Strahov</Name>
         <hasBedBugs>true</hasBedBugs>
-        <uni:University>
-            <uni:id>2</uni:id>
-            <uni:Name xml:lang="en">Charles University</uni:Name>
-            <uni:webPage>https://cuni.cz</uni:webPage>
-        </uni:University>
         <jani:Janitors>
             <jani:Janitor>
                 <person:FirstName xml:lang="cs">Marcela</person:FirstName>
                 <person:MiddleNames></person:MiddleNames>
                 <person:LastName xml:lang="cs">Vomáčková</person:LastName>
                 <person:id>1</person:id>
-                <jani:OwnsBroom>true</jani:OwnsBroom>
+                <jani:OwnsBroom>false</jani:OwnsBroom>
             </jani:Janitor>
         </jani:Janitors>
         <DormRooms>
@@ -31,6 +26,26 @@ xmlns:uni="http://www.our-example-data.org/university/xsd">
                 <Number>10</Number>
                 <Capacity>2</Capacity>
                 <HasToilet>false</HasToilet>
+                <stud:Students></stud:Students>
+            </DormRoom>
+        </DormRooms>
+    </Dormitory>
+    <Dormitory>
+        <address>Praha Pátkova 2136/3</address>
+        <Name xml:lang="cs">17. Listopadu</Name>
+        <hasBedBugs>false</hasBedBugs>
+        <uni:University>
+            <uni:id>2</uni:id>
+            <uni:Name xml:lang="en">Charles University</uni:Name>
+            <uni:webPage>https://cuni.cz</uni:webPage>
+        </uni:University>
+        <jani:Janitors></jani:Janitors>
+        <DormRooms>
+            <DormRoom>
+                <Floor>100</Floor>
+                <Number>1000</Number>
+                <Capacity>3</Capacity>
+                <HasToilet>true</HasToilet>
                 <stud:Students>
                     <stud:Student>
                         <person:FirstName xml:lang="cs">David</person:FirstName>
@@ -54,26 +69,6 @@ xmlns:uni="http://www.our-example-data.org/university/xsd">
         </DormRooms>
     </Dormitory>
     <Dormitory>
-        <address>Praha Pátkova 2136/3</address>
-        <Name xml:lang="cs">17. Listopadu</Name>
-        <hasBedBugs>false</hasBedBugs>
-        <uni:University>
-            <uni:id>2</uni:id>
-            <uni:Name xml:lang="en">Charles University</uni:Name>
-            <uni:webPage>https://cuni.cz</uni:webPage>
-        </uni:University>
-        <jani:Janitors></jani:Janitors>
-        <DormRooms>
-            <DormRoom>
-                <Floor>100</Floor>
-                <Number>1000</Number>
-                <Capacity>3</Capacity>
-                <HasToilet>true</HasToilet>
-                <stud:Students></stud:Students>
-            </DormRoom>
-        </DormRooms>
-    </Dormitory>
-    <Dormitory>
         <address>Cambridge O'Brians street</address>
         <Name xml:lang="en">Cambridge Dormitory</Name>
         <hasBedBugs>false</hasBedBugs>
@@ -88,7 +83,7 @@ xmlns:uni="http://www.our-example-data.org/university/xsd">
                 <person:MiddleNames></person:MiddleNames>
                 <person:LastName xml:lang="cs">Vomáčková</person:LastName>
                 <person:id>1</person:id>
-                <jani:OwnsBroom>true</jani:OwnsBroom>
+                <jani:OwnsBroom>false</jani:OwnsBroom>
             </jani:Janitor>
         </jani:Janitors>
         <DormRooms>
