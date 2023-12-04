@@ -1,0 +1,40 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://www.our-example-data.org/university.json",
+    "title": "University",
+    "description": "A university",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "A unique identifier of the university",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "Name": {
+            "description": "Name of the university",
+            "type": "object",
+            "properties": {
+                "en": {
+                    "description": "Name of the university in english",
+                    "type": "string"
+                },
+                "cs": {
+                    "description": "Name of the university in czech",
+                    "type": "string"
+                }
+            },
+            "required": ["en"]
+        },
+        "webPage": {
+            "description": "Webpage of the university",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "Name of the webpage resource",
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "required": ["id", "Name", "webPage"]
+}

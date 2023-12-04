@@ -1,0 +1,64 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://www.our-example-data.org/janitor.json",
+    "title": "Janitor",
+    "description": "A janitor",
+    "type": "object",
+    "properties": {
+        "FirstName": {
+            "description": "First name of the student",
+            "type": "object",
+            "properties": {
+                "en": {
+                    "description": "First name of the student in english",
+                    "type": "string"
+                },
+                "cs": {
+                    "description": "First name of the student in czech",
+                    "type": "string"
+                }
+            }
+        },
+        "MiddleName": {
+            "description": "Middle name(s) of the student",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "en": {
+                        "description": "Middle name of the student in english",
+                        "type": "string"
+                    },
+                    "cs": {
+                        "description": "Middle name of the student in czech",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "LastName": {
+            "description": "Last name of the student",
+            "type": "object",
+            "properties": {
+                "en": {
+                    "description": "Last name of the student in english",
+                    "type": "string"
+                },
+                "cs": {
+                    "description": "Last name of the student in czech",
+                    "type": "string"
+                }
+            }
+        },
+        "id": {
+            "description": "Unique identifier of the janitor",
+            "type": "integer",
+            "exclusiveMinimum": 0
+        },
+        "OwnsBroom": {
+            "description": "Whether or not the janitor owns a broom",
+            "type": "boolean"
+        }
+    },
+    "required": ["FirstName", "LastName", "id", "OwnsBroom"]
+}

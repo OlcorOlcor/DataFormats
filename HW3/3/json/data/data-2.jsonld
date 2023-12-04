@@ -1,0 +1,46 @@
+{   
+    "@context": {
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "stud": "http://www.our-example-data.org/student/",
+        "ex": "http://example.org/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#/",
+
+        "FirstName": {
+            "@id": "foaf:firstName",
+            "@container": "@language"
+        },
+        "MiddleName": "@nest",
+        "name": {
+            "@id": "ex:middleName",
+            "@container": "@language"
+        },
+        "LastName": {
+            "@id": "foaf:lastName",
+            "@container": "@language"
+        },
+        "id": {
+            "@id": "ex:personID",
+            "@type": "xsd:integer"
+        }
+    },
+    "@id": "stud:David",
+    "@type": "ex:Student",
+    "FirstName": {
+        "cs": "David"
+    },
+    "MiddleName": [
+        {"name": {
+            "cs": "Honza"
+        }}, 
+        {"name": {
+            "cs": "Terka"
+        }},
+        {"name": {
+            "cs": "Honza"
+        }}
+    ],
+    "LastName": {
+        "cs": "Petera"
+    },
+    "id": 86
+}

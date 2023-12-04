@@ -1,0 +1,93 @@
+{
+    "@context": {
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "stud": "http://www.our-example-data.org/student/",
+        "uni": "http://www.our-example-data.org/university/",
+        "ex": "http://example.org/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#/",
+        "dcterms": "http://purl.org/dc/terms/",
+
+        "FirstName": {
+            "@id": "foaf:firstName",
+            "@container": "@language"
+        },
+        "MiddleName": "@nest",
+        "name": {
+            "@id": "ex:middleName",
+            "@container": "@language"
+        },
+        "LastName": {
+            "@id": "foaf:lastName",
+            "@container": "@language"
+        },
+        "id": {
+            "@id": "ex:personID",
+            "@type": "xsd:integer"
+        },
+        "Universities": {
+            "@id": "ex:studiesAt",
+            "@container": "@set",
+            "@type": "ex:University"
+        },
+        "ex:University": {
+            "@context": {
+                "id": {
+                    "@id": "ex:universityID",
+                    "@type": "xsd:integer"
+                },
+                "Name": {
+                    "@id": "dcterms:title",
+                    "@container": "@language"
+                },
+                "webPage": {
+                    "@context": {
+                        "url": "@id"
+                    },
+                    "@id": "foaf:homepage"
+                },
+                "name": {
+                      "@id": "foaf:name",
+                      "@container": "@language"
+                }
+            }
+        }
+    },
+    "@id": "stud:David",
+    "@type": "ex:Student",
+    "FirstName": {
+        "cs": "David"
+    },
+    "MiddleName": [
+        {"name": {
+            "cs": "Honza"
+        }}, 
+        {"name": {
+            "cs": "Terka"
+        }},
+        {"name": {
+            "cs": "Honza"
+        }}
+    ],
+    "LastName": {
+        "cs": "Petera"
+    },
+    "id": 86,
+    "Universities": [
+        {
+            "@id": "uni:CharlesUniversity",
+            "@type": "ex:University",
+            "id": 2,
+            "Name": {
+                "en": "Charles university"
+            },
+            "webPage": {
+                "url": "https://cuni.cz/",
+                "@type": "foaf:Document",
+                "name": {
+                    "en": "CharlesUniversity"
+                }
+            }
+        }
+
+    ]
+}

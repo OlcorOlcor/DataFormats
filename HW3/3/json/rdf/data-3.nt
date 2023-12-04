@@ -1,0 +1,5 @@
+<http://www.our-example-data.org/janitor/Marcela> <http://example.org/vocabulary/ownsBroom> "true"^^<http://www.w3.org/2001/XMLSchema#/boolean> .
+<http://www.our-example-data.org/janitor/Marcela> <http://example.org/vocabulary/personID> "1"^^<http://www.w3.org/2001/XMLSchema#/integer> .
+<http://www.our-example-data.org/janitor/Marcela> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Janitor> .
+<http://www.our-example-data.org/janitor/Marcela> <http://xmlns.com/foaf/0.1/firstName> "Marcela"@cs .
+<http://www.our-example-data.org/janitor/Marcela> <http://xmlns.com/foaf/0.1/lastName> "Vomáčková"@cs .
