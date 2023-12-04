@@ -1,0 +1,176 @@
+{
+    "@context": {
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "stud": "http://www.our-example-data.org/student/",
+        "uni": "http://www.our-example-data.org/university/",
+        "ex": "http://example.org/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "droom": "http://www.our-example-data.org/dorm-room/",
+        "jani": "http://www.our-example-data.org/janitor/",
+
+        "address": {
+            "@id": "ex:dormitoryAddress",
+            "@container": "@language"
+        },
+        "Name": {
+            "@id": "dcterms:title",
+            "@container": "@language"
+        },
+        "hasBedBugs": {
+            "@id": "ex:hasBedBugs",
+            "@type": "xsd:boolean"
+        },
+        "University": {
+            "@id": "ex:belongsTo",
+            "@type": "ex:University"
+        },
+        "Janitors": {
+            "@reverse": "ex:worksIn",
+            "@container": "@set",
+            "@type": "ex:Janitor"
+        },
+        "DormRooms": {
+            "@reverse": "ex:isIn",
+            "@container": "@set",
+            "@type": "ex:DormRoom"
+        },
+        "ex:DormRoom": {
+            "@context": {
+                "Floor": {
+                    "@id": "ex:floor",
+                    "@type": "xsd:integer"
+                },
+                "Number": {
+                    "@id": "ex:number",
+                    "@type": "xsd:integer"
+                },
+                "Capacity": {
+                    "@id": "ex:capacity",
+                    "@type": "xsd:integer"
+                },
+                "HasToilet": {
+                    "@id": "ex:hasToilet",
+                    "@type": "xsd:boolean"
+                }
+            }
+        },
+        "ex:Student": {
+            "@context": {
+                "FirstName": {
+                    "@id": "foaf:firstName",
+                    "@container": "@language"
+                },
+                "MiddleName": "@nest",
+                "name": {
+                    "@id": "ex:middleName",
+                    "@container": "@language"
+                },
+                "LastName": {
+                    "@id": "foaf:lastName",
+                    "@container": "@language"
+                },
+                "id": {
+                    "@id": "ex:personID",
+                    "@type": "xsd:integer"
+                },
+                "Universities": {
+                    "@id": "ex:studiesAt",
+                    "@container": "@set",
+                    "@type": "ex:University"
+                }
+            }
+        },
+        "ex:University": {
+            "@context": {
+                "id": {
+                    "@id": "ex:universityID",
+                    "@type": "xsd:integer"
+                },
+                "Name": {
+                    "@id": "dcterms:title",
+                    "@container": "@language"
+                },
+                "webPage": {
+                    "@context": {
+                        "url": "@id"
+                    },
+                    "@id": "foaf:homepage"
+                },
+                "name": {
+                    "@id": "foaf:name",
+                    "@container": "@language"
+                }
+            }
+        },
+        "ex:Janitor": {
+            "@context": {
+                "FirstName": {
+                    "@id": "foaf:firstName",
+                    "@container": "@language"
+                },
+                "LastName": {
+                    "@id": "foaf:lastName",
+                    "@container": "@language"
+                },
+                "id": {
+                    "@id": "ex:personID",
+                    "@type": "xsd:integer"
+                },
+                "OwnsBroom": {
+                    "@id": "ex:ownsBroom",
+                    "@type": "xsd:boolean"
+                }
+            }
+        }
+    },
+
+    "@id": "dorm:CambridgeDorm",
+    "@type": "ex:Dormitory",
+    "address": {
+        "en": "Cambridge O'Brians street"
+    },
+    "Name": {
+        "en": "Cambridge Dormitory"
+    },
+    "hasBedBugs": false,
+    "University": {
+        "@id": "uni:Cambridge",
+        "@type": "ex:University",
+        "id": 1,
+        "Name": {
+            "en": "Cambridge"
+        },
+        "webPage": {
+            "url": "https://www.cam.ac.uk",
+            "@type": "foaf:Document",
+            "name": {
+                "en": "Cambridge"
+            }
+        }
+    },
+    "Janitors": [
+        {
+            "@id": "jani:Marcela",
+            "@type": "ex:Janitor",
+            "FirstName": {
+                "cs": "Marcela"
+            },
+            "LastName": {
+                "cs": "Vomáčková"
+            },
+            "id": 1,
+            "OwnsBroom": true
+        }
+    ],
+    "DormRooms": [
+        {
+            "@id": "droom:CambridgeDorm421",
+            "@type": "ex:DormRoom",
+            "Floor": 42,
+            "Number": 421,
+            "Capacity": 4,
+            "HasToilet": true
+        }
+    ]
+}
