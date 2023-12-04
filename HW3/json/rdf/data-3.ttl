@@ -1,0 +1,10 @@
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix jani: <http://www.our-example-data.org/janitor/> .
+@prefix xsd1: <http://www.w3.org/2001/XMLSchema#/> .
+
+jani:Marcela a ex:Janitor ;
+    ex:ownsBroom "true"^^xsd1:boolean ;
+    ex:personID "1"^^xsd1:integer ;
+    foaf:firstName "Marcela"@cs ;
+    foaf:lastName "Vomáčková"@cs .

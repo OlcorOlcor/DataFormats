@@ -1,5 +1,41 @@
-{
+{   
+    "@context": {
+        "dcterms": "http://purl.org/dc/terms/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "ex": "http://example.org/vocabulary/",
+        "uni": "http://www.our-example-data.org/university/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#/",
+
+        "id": {
+            "@id": "ex:universityID",
+            "@type": "xsd:integer"
+        },
+        "Name": {
+            "@id": "dcterms:title",
+            "@container": "@language"
+        },
+        "webPage": {
+            "@context": {
+                "url": "@id"
+            },
+            "@id": "foaf:homepage"
+        },
+        "name": {
+          	"@id": "foaf:name",
+          	"@container": "@language"
+        }
+    },
+    "@id": "uni:Harvard",
+    "@type": "ex:University",
     "id": 3,
-    "Name": "Harvard",
-    "webPage": "https://pll.harvard.edu"
+    "Name": {
+        "en": "Harvard"
+    },
+    "webPage": {
+        "url": "https://pll.harvard.edu",
+        "@type": "foaf:Document",
+        "name": {
+            "en": "Harvard"
+        }
+    }
 }
