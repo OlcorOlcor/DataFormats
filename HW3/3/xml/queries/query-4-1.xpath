@@ -1,0 +1,3 @@
+(: List all lastnames of students with personal id > 42 and that studies at Charles University. :)
+
+//Student[person:id > 42 and Universities/uni:University/uni:Name = 'Charles University']/person:LastName/text()
