@@ -6,12 +6,32 @@
     "type": "object",
     "properties": {
         "address": {
-            "description": "Address of the dormitory",
-            "type": "string"
+            "description": "Adress of the dormitory",
+            "type": "object",
+            "properties": {
+                "en": {
+                    "description": "Adress of the dormitory in english",
+                    "type": "string"
+                },
+                "cs": {
+                    "description": "Adress of the dormitory in czech",
+                    "type": "string"
+                }
+            }
         },
         "Name": {
             "description": "Name of the dormitory",
-            "type": "string"
+            "type": "object",
+            "properties": {
+                "en": {
+                    "description": "Name of the dormitory in english",
+                    "type": "string"
+                },
+                "cs": {
+                    "description": "Name of the dormitory in czech",
+                    "type": "string"
+                }
+            }
         },
         "hasBedBugs": {
             "description": "Whether the dormitory has bed bugs",

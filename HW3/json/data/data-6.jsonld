@@ -1,14 +1,158 @@
-{
-    "address": "Praha Pátkova 2136/3",
-    "Name": "17. Listopadu",
+{   
+    "@context": {
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "stud": "http://www.our-example-data.org/student/",
+        "uni": "http://www.our-example-data.org/university/",
+        "ex": "http://example.org/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "droom": "http://www.our-example-data.org/dorm-room/",
+        "jani": "http://www.our-example-data.org/janitor/",
+
+        "address": {
+            "@id": "ex:dormitoryAddress",
+            "@container": "@language"
+        },
+        "Name": {
+            "@id": "dcterms:title",
+            "@container": "@language"
+        },
+        "hasBedBugs": {
+            "@id": "ex:hasBedBugs",
+            "@type": "xsd:boolean"
+        },
+        "University": {
+            "@id": "ex:belongsTo",
+            "@type": "ex:University"
+        },
+        "Janitors": {
+            "@reverse": "ex:worksIn",
+            "@container": "@set",
+            "@type": "ex:Janitor"
+        },
+        "DormRooms": {
+            "@reverse": "ex:isIn",
+            "@container": "@set",
+            "@type": "ex:DormRoom"
+        },
+        "ex:DormRoom": {
+            "@context": {
+                "Floor": {
+                    "@id": "ex:floor",
+                    "@type": "xsd:integer"
+                },
+                "Number": {
+                    "@id": "ex:number",
+                    "@type": "xsd:integer"
+                },
+                "Capacity": {
+                    "@id": "ex:capacity",
+                    "@type": "xsd:integer"
+                },
+                "HasToilet": {
+                    "@id": "ex:hasToilet",
+                    "@type": "xsd:boolean"
+                }
+            }
+        },
+        "ex:Student": {
+            "@context": {
+                "FirstName": {
+                    "@id": "foaf:firstName",
+                    "@container": "@language"
+                },
+                "MiddleName": "@nest",
+                "name": {
+                    "@id": "ex:middleName",
+                    "@container": "@language"
+                },
+                "LastName": {
+                    "@id": "foaf:lastName",
+                    "@container": "@language"
+                },
+                "id": {
+                    "@id": "ex:personID",
+                    "@type": "xsd:integer"
+                },
+                "Universities": {
+                    "@id": "ex:studiesAt",
+                    "@container": "@set",
+                    "@type": "ex:University"
+                }
+            }
+        },
+        "ex:University": {
+            "@context": {
+                "id": {
+                    "@id": "ex:universityID",
+                    "@type": "xsd:integer"
+                },
+                "Name": {
+                    "@id": "dcterms:title",
+                    "@container": "@language"
+                },
+                "webPage": {
+                    "@context": {
+                        "url": "@id"
+                    },
+                    "@id": "foaf:homepage"
+                },
+                "name": {
+                    "@id": "foaf:name",
+                    "@container": "@language"
+                }
+            }
+        },
+        "ex:Janitor": {
+            "@context": {
+                "FirstName": {
+                    "@id": "foaf:firstName",
+                    "@container": "@language"
+                },
+                "LastName": {
+                    "@id": "foaf:lastName",
+                    "@container": "@language"
+                },
+                "id": {
+                    "@id": "ex:personID",
+                    "@type": "xsd:integer"
+                },
+                "OwnsBroom": {
+                    "@id": "ex:ownsBroom",
+                    "@type": "xsd:boolean"
+                }
+            }
+        }
+    },
+
+    "@id": "dorm:17listopad",
+    "@type": "ex:Dormitory",
+    "address": {
+        "cs": "Praha Pátkova 2136/3"
+    },
+    "Name": {
+        "cs": "17. Listopadu"
+    },
     "hasBedBugs": false,
     "University": {
-        "Name": "Charles University",
+        "@id": "uni:CharlesUniversity",
+        "@type": "ex:University",
         "id": 2,
-        "webPage": "https://cuni.cz"
+        "Name": {
+            "en": "Charles university"
+        },
+        "webPage": {
+            "url": "https://cuni.cz/",
+            "@type": "foaf:Document",
+            "name": {
+                "en": "CharlesUniversity"
+            }
+        }
     },
     "DormRooms": [
         {
+            "@id": "droom:17listopad1000",
+            "@type": "ex:DormRoom",
             "Floor": 100,
             "Number": 1000,
             "Capacity": 3,

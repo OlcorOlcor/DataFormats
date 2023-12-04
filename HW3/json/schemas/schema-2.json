@@ -7,18 +7,48 @@
     "properties": {
         "FirstName": {
             "description": "First name of the student",
-            "type": "string"
+            "type": "object",
+            "properties": {
+                "en": {
+                    "description": "First name of the student in english",
+                    "type": "string"
+                },
+                "cs": {
+                    "description": "First name of the student in czech",
+                    "type": "string"
+                }
+            }
         },
         "MiddleName": {
             "description": "Middle name(s) of the student",
             "type": "array",
             "items": {
-                "type": "string"
+                "type": "object",
+                "properties": {
+                    "en": {
+                        "description": "Middle name of the student in english",
+                        "type": "string"
+                    },
+                    "cs": {
+                        "description": "Middle name of the student in czech",
+                        "type": "string"
+                    }
+                }
             }
         },
         "LastName": {
             "description": "Last name of the student",
-            "type": "string"
+            "type": "object",
+            "properties": {
+                "en": {
+                    "description": "Last name of the student in english",
+                    "type": "string"
+                },
+                "cs": {
+                    "description": "Last name of the student in czech",
+                    "type": "string"
+                }
+            }
         },
         "id": {
             "description": "Unique identifier of the student",
