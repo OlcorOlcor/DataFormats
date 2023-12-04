@@ -19,7 +19,7 @@
     <xsl:value-of select="Name"/> a ex:University ;
             dcterms:title &lt;xsl:value-of select="Name"@&lt;xsl:value-of select="Name/@xml:lang"/&gt;;
             ex:universityID &lt;xsl:value-of select="id"/&gt; ;
-            foaf:homepage &lt;xsl:value-of select=webPage/&gt; .
+            foaf:homepage &lt;xsl:value-of select="webPage"/&gt; .
     </xsl:template>
 
     <xsl:template match="text()"/>
