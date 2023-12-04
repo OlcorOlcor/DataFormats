@@ -3,6 +3,7 @@
 xmlns:uni="http://www.our-example-data.org/university/xsd"
 xmlns:jani="http://www.our-example-data.org/janitor/xsd"
 xmlns:stud="http://www.our-example-data.org/student/xsd"
+xmlns = "http://www.our-example-data.org/dormitory/xsd"
 targetNamespace="http://www.our-example-data.org/dormitory/xsd" 
 xmlns:xml="http://www.w3.org/XML/1998/namespace"
 elementFormDefault="qualified">
@@ -25,13 +26,7 @@ elementFormDefault="qualified">
                 </xs:element>
                 <xs:element name="hasBedBugs" type="xs:boolean"/>
                 <xs:element ref="uni:University" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="Janitors">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element ref="jani:Janitor" minOccurs="0" maxOccurs="unbounded"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+                <xs:element ref="jani:Janitors"/>
                 <xs:element name="DormRooms">
                     <xs:complexType>
                         <xs:sequence>
@@ -48,19 +43,20 @@ elementFormDefault="qualified">
                                             </xs:simpleType>
                                         </xs:element>
                                         <xs:element name="HasToilet" type="xs:boolean"/>
-                                        <xs:element name="Students">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element ref="stud:Student" minOccurs="0" maxOccurs="unbounded"/>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
+                                        <xs:element ref="stud:Students"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Dormitories">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Dormitory" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

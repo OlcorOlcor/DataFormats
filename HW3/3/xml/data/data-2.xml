@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<Student xmlns="http://www.our-example-data.org/student/xsd" 
+<Students xmlns="http://www.our-example-data.org/student/xsd" 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.our-example-data.org/student/xsd ../schemas/schema-4.xsd"
 xmlns:person="http://www.our-example-data.org/person/xsd">
-    <person:FirstName xml:lang="cs">David</person:FirstName>
-    <person:MiddleNames>
-        <person:MiddleName xml:lang="cs">Honza</person:MiddleName>
-        <person:MiddleName xml:lang="cs">Terka</person:MiddleName>
-        <person:MiddleName xml:lang="cs">Honza</person:MiddleName>
-    </person:MiddleNames>
-    <person:LastName xml:lang="cs">Petera</person:LastName>
-    <person:id>86</person:id>
-    <Universities></Universities>
-</Student>
+    <Student>
+        <person:FirstName xml:lang="cs">David</person:FirstName>
+        <person:MiddleNames>
+            <person:MiddleName xml:lang="cs">Honza</person:MiddleName>
+            <person:MiddleName xml:lang="cs">Terka</person:MiddleName>
+            <person:MiddleName xml:lang="cs">Honza</person:MiddleName>
+        </person:MiddleNames>
+        <person:LastName xml:lang="cs">Petera</person:LastName>
+        <person:id>86</person:id>
+        <Universities></Universities>
+    </Student>
+</Students> 

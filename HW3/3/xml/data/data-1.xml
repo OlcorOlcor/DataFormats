@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<University xmlns="http://www.our-example-data.org/university/xsd" 
+<Universities xmlns="http://www.our-example-data.org/university/xsd" 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.our-example-data.org/university/xsd ../schemas/schema-1.xsd">
-    <id>3</id>
-    <Name xml:lang="en">Harvard</Name>
-    <webPage>https://pll.harvard.edu</webPage>
-</University>
+    <University>
+        <id>3</id>
+        <Name xml:lang="en">Harvard</Name>
+        <webPage>https://pll.harvard.edu</webPage>
+    </University>
+</Universities>
