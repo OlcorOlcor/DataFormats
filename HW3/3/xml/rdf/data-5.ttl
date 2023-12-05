@@ -1,0 +1,91 @@
+
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+
+@prefix ex: &lt;http://example.org/vocabulary/&gt; .
+@prefix uni: &lt;http://www.our-example-data.org/university&gt; .
+@prefix dorm: &lt;http://www.our-example-data.org/dormitory&gt; .
+@prefix droom: &lt;http://www.our-example-data.org/dorm-room&gt; .
+@prefix stud: &lt;http://www.our-example-data.org/student&gt; .
+@prefix jani: &lt;http://www.our-example-data.org/janitor&gt; .
+
+dorm:Strahov a ex:Dormitory ;
+        ex:dormitoryAddress "Praha Vaníčkova 315/7" ;
+        dcterms:title "Strahov"@cs ;
+
+        ex:hasBedBugs true .
+jani:Marcela a ex:Janitor ;
+        foaf:firstName "Marcela"@cs ;
+        
+        foaf:lastName "Vomáčková"@cs ;
+        ex:personID 1 ;
+        ex:ownsBroom false ;
+        ex:worksIn uni:Strahov ;
+        rdfs:label "Janitor Marcela Vomáčková"@en .
+droom:Strahov10 a ex:DormRoom ;
+        ex:floor 0 ;
+        ex:number 10 ;
+        ex:capacity 2 ;
+        ex:hasToilet false ;
+        ex:isIn dorm:Strahov ;
+        rdfs:label "Strahov Dorm room number 10"@en .
+
+dorm:17Listopad a ex:Dormitory ;
+        ex:dormitoryAddress "Praha Pátkova 2136/3" ;
+        dcterms:title "17. Listopadu"@cs ;
+
+        ex:hasBedBugs false ;
+        ex:belongsTo uni:Charles University .
+uni:Charles University a ex:University ;
+        dcterms:title "Charles University"@en ;
+        ex:universityID 2 ;
+        foaf:homepage &lt;https://cuni.cz&gt; .
+droom:17Listopad1000 a ex:DormRoom ;
+        ex:floor 100 ;
+        ex:number 1000 ;
+        ex:capacity 3 ;
+        ex:hasToilet true ;
+        ex:isIn dorm:17Listopad ;
+        rdfs:label "17Listopad Dorm room number 1000"@en .
+
+stud:David a ex:Student ;
+        foaf:firstName "David"@cs ;
+        
+        ex:middleName "Honza"@cs ;
+
+        ex:middleName "Terka"@cs ;
+
+        ex:middleName "Honza"@cs ;
+
+        foaf:lastName "Petera"@cs ;
+        ex:personID 86 ;
+        ex:staysIn droom:17Listopad1000 ;
+        ex:studiesAt uni:Charles University ;
+        rdfs:label "Student David Petera"@en .
+dorm:CambridgeDorm a ex:Dormitory ;
+        ex:dormitoryAddress "Cambridge O'Brians street" ;
+        dcterms:title "Cambridge Dormitory"@en ;
+
+        ex:hasBedBugs false ;
+        ex:belongsTo uni:Cambridge .
+uni:Cambridge a ex:University ;
+        dcterms:title "Cambridge"@en ;
+        ex:universityID 1 ;
+        foaf:homepage &lt;https://www.cam.ac.uk&gt; .
+jani:Marcela a ex:Janitor ;
+        foaf:firstName "Marcela"@cs ;
+        
+        foaf:lastName "Vomáčková"@cs ;
+        ex:personID 1 ;
+        ex:ownsBroom false ;
+        ex:worksIn uni:CambridgeDorm ;
+        rdfs:label "Janitor Marcela Vomáčková"@en .
+droom:CambridgeDorm421 a ex:DormRoom ;
+        ex:floor 42 ;
+        ex:number 421 ;
+        ex:capacity 4 ;
+        ex:hasToilet true ;
+        ex:isIn dorm:CambridgeDorm ;
+        rdfs:label "CambridgeDorm Dorm room number 421"@en .
+

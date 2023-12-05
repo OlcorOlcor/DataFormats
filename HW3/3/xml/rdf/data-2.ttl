@@ -1,0 +1,18 @@
+
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix ex: &lt;http://example.org/vocabulary/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix stud: &lt;http://www.our-example-data.org/student/&gt; .
+
+stud:David a ex:Student ;
+        foaf:firstName "David"@cs;
+        
+        ex:middleName "Honza"@cs ;
+
+        ex:middleName "Terka"@cs ;
+
+        ex:middleName "Honza"@cs ;
+
+        foaf:lastName "Petera"@cs ;
+        ex:personID 86 ;
+        rdfs:label "Student David Petera"@en .

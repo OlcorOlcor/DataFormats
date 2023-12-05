@@ -1,0 +1,13 @@
+
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix ex: &lt;http://example.org/vocabulary/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix jani: &lt;http://www.our-example-data.org/janitor&gt; .
+
+jani:Marcela a ex:Janitor ;
+        foaf:firstName "Marcela"@cs;
+        
+        foaf:lastName "Vomáčková"@cs ;
+        ex:personID 1 ;
+        ex:ownsBroom false ;
+        rdfs:label "Janitor Marcela Vomáčková"@en .

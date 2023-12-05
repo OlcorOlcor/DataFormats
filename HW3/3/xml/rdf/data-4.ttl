@@ -1,0 +1,26 @@
+
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .    
+@prefix ex: &lt;http://example.org/vocabulary/&gt; .
+@prefix uni: &lt;http://www.our-example-data.org/university&gt; .
+@prefix stud: &lt;http://www.our-example-data.org/student&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+stud:David a ex:Student ;
+        foaf:firstName "David"@cs;
+        
+        ex:middleName "Honza"@cs ;
+
+        ex:middleName "Terka"@cs ;
+
+        ex:middleName "Honza"@cs ;
+
+        foaf:lastName "Petera"@cs ;
+        ex:personID 86 ;
+        ex:studiesAt uni:Charles University ;
+        rdfs:label "Student David Petera"@en .
+uni:Charles University a ex:University ;
+        dcterms:title "Charles University"@en;
+        ex:universityID 2;
+        foaf:homepage &lt;https://cuni.cz&gt; .
+    

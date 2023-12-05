@@ -1,0 +1,10 @@
+
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+@prefix ex: &lt;http://example.org/vocabulary/&gt; .
+@prefix uni: &lt;http://www.our-example-data.org/university/&gt; .
+
+uni:Harvard a ex:University ;
+        dcterms:title "Harvard"@en;
+        ex:universityID 3;
+        foaf:homepage &lt;https://pll.harvard.edu&gt; .
