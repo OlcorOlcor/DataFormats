@@ -1,14 +1,14 @@
-<dorm:17listopad> <http://example.org/vocabulary/belongsTo> <http://www.our-example-data.org/university/CharlesUniversity> .
-<dorm:17listopad> <http://example.org/vocabulary/dormitoryAddress> "Praha Pátkova 2136/3"@cs .
-<dorm:17listopad> <http://example.org/vocabulary/hasBedBugs> "false"^^<http://www.w3.org/2001/XMLSchema#/boolean> .
-<dorm:17listopad> <http://purl.org/dc/terms/title> "17. Listopadu"@cs .
-<dorm:17listopad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Dormitory> .
 <http://www.our-example-data.org/dorm-room/17listopad1000> <http://example.org/vocabulary/capacity> "3"^^<http://www.w3.org/2001/XMLSchema#/integer> .
 <http://www.our-example-data.org/dorm-room/17listopad1000> <http://example.org/vocabulary/floor> "100"^^<http://www.w3.org/2001/XMLSchema#/integer> .
 <http://www.our-example-data.org/dorm-room/17listopad1000> <http://example.org/vocabulary/hasToilet> "true"^^<http://www.w3.org/2001/XMLSchema#/boolean> .
-<http://www.our-example-data.org/dorm-room/17listopad1000> <http://example.org/vocabulary/isIn> <dorm:17listopad> .
+<http://www.our-example-data.org/dorm-room/17listopad1000> <http://example.org/vocabulary/isIn> <http://www.our-example-data.org/dormitory/17listopad> .
 <http://www.our-example-data.org/dorm-room/17listopad1000> <http://example.org/vocabulary/number> "1000"^^<http://www.w3.org/2001/XMLSchema#/integer> .
 <http://www.our-example-data.org/dorm-room/17listopad1000> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/DormRoom> .
+<http://www.our-example-data.org/dormitory/17listopad> <http://example.org/vocabulary/belongsTo> <http://www.our-example-data.org/university/CharlesUniversity> .
+<http://www.our-example-data.org/dormitory/17listopad> <http://example.org/vocabulary/dormitoryAddress> "Praha Pátkova 2136/3"@cs .
+<http://www.our-example-data.org/dormitory/17listopad> <http://example.org/vocabulary/hasBedBugs> "false"^^<http://www.w3.org/2001/XMLSchema#/boolean> .
+<http://www.our-example-data.org/dormitory/17listopad> <http://purl.org/dc/terms/title> "17. Listopadu"@cs .
+<http://www.our-example-data.org/dormitory/17listopad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Dormitory> .
 <http://www.our-example-data.org/university/CharlesUniversity> <http://example.org/vocabulary/universityID> "2"^^<http://www.w3.org/2001/XMLSchema#/integer> .
 <http://www.our-example-data.org/university/CharlesUniversity> <http://purl.org/dc/terms/title> "Charles university"@en .
 <http://www.our-example-data.org/university/CharlesUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/University> .
