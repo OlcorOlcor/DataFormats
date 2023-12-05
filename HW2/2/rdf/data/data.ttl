@@ -162,7 +162,7 @@ droom:CambridgeDorm421 a ex:DormRoom ;
     ex:capacity 4 ;
     ex:hasToilet true ;
     ex:isIn dorm:CambridgeDorm ;
-    rdfs:label "Cambridge Dorm room number 421"@en .
+    rdfs:label "CambridgeDorm Dorm room number 421"@en .
 
 droom:Strahov10 a ex:DormRoom ;
     ex:floor 0 ;

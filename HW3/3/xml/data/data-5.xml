@@ -8,8 +8,9 @@ xmlns:jani="http://www.our-example-data.org/janitor/xsd"
 xmlns:stud="http://www.our-example-data.org/student/xsd"
 xmlns:uni="http://www.our-example-data.org/university/xsd">
     <Dormitory>
+        <Name>Strahov</Name>
         <address>Praha Vaníčkova 315/7</address>
-        <Name xml:lang="cs">Strahov</Name>
+        <title xml:lang="cs">Strahov</title>
         <hasBedBugs>true</hasBedBugs>
         <jani:Janitors>
             <jani:Janitor>
@@ -31,8 +32,9 @@ xmlns:uni="http://www.our-example-data.org/university/xsd">
         </DormRooms>
     </Dormitory>
     <Dormitory>
+        <Name>17Listopad</Name>
         <address>Praha Pátkova 2136/3</address>
-        <Name xml:lang="cs">17. Listopadu</Name>
+        <title xml:lang="cs">17. Listopadu</title>
         <hasBedBugs>false</hasBedBugs>
         <uni:University>
             <uni:id>2</uni:id>
@@ -69,8 +71,9 @@ xmlns:uni="http://www.our-example-data.org/university/xsd">
         </DormRooms>
     </Dormitory>
     <Dormitory>
+        <Name>CambridgeDorm</Name>
         <address>Cambridge O'Brians street</address>
-        <Name xml:lang="en">Cambridge Dormitory</Name>
+        <title xml:lang="en">Cambridge Dormitory</title>
         <hasBedBugs>false</hasBedBugs>
         <uni:University>
             <uni:id>1</uni:id>

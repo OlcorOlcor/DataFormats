@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="3.0" 
+<xsl:stylesheet version="2.0" 
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    xmlns:xs="http://www.w3.org/2001/XMLSchema"
    xmlns:fn="http://www.w3.org/2005/xpath-functions"
@@ -14,12 +14,9 @@
     <xsl:template match="dorm:Dormitories">
         @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
         @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
-        @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
-        @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
         @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
         
         @prefix ex: &lt;http://example.org/vocabulary/&gt; .
-        @prefix data: &lt;http://www.our-example-data.org/&gt; .
         @prefix uni: &lt;http://www.our-example-data.org/university&gt; .
         @prefix dorm: &lt;http://www.our-example-data.org/dormitory&gt; .
         @prefix droom: &lt;http://www.our-example-data.org/dorm-room&gt; .
@@ -32,7 +29,7 @@
     <xsl:template match="dorm:Dormitory">
         <xsl:value-of select="concat('dorm:', dorm:Name)"/> a ex:Dormitory ;
             ex:dormitoryAddress &quot;<xsl:value-of select="dorm:address"/>&quot; ;
-            dcterms:title &quot;<xsl:value-of select="dorm:Name"/>&quot;@<xsl:value-of select="dorm:Name/@xml:lang"/> ;
+            dcterms:title &quot;<xsl:value-of select="dorm:title"/>&quot;@<xsl:value-of select="dorm:title/@xml:lang"/> ;
         <xsl:choose>
         <xsl:when test="uni:University/uni:Name!=''">
             ex:hasBedBugs <xsl:value-of select="dorm:hasBedBugs"/> ;
@@ -54,11 +51,12 @@
             ex:hasToilet <xsl:value-of select="dorm:HasToilet"/> ;
             ex:isIn dorm:<xsl:value-of select="../../dorm:Name"/> ;
             rdfs:label &quot;<xsl:value-of select="concat(../../dorm:Name, ' Dorm room number ', dorm:Number)"/>&quot;@en .
+
     <xsl:apply-templates/>
     </xsl:template>
 
     <xsl:template match="stud:Student">
-    <xsl:value-of select="concat('stud:', person:FirstName)"/> a ex:Student ;
+        <xsl:value-of select="concat('stud:', person:FirstName)"/> a ex:Student ;
             foaf:firstName &quot;<xsl:value-of select="person:FirstName"/>&quot;@<xsl:value-of select="person:FirstName/@xml:lang"/> ;
             <xsl:apply-templates select="person:MiddleNames/person:MiddleName"/>
             foaf:lastName &quot;<xsl:value-of select="person:LastName"/>&quot;@<xsl:value-of select="person:LastName/@xml:lang"/> ;
@@ -73,14 +71,14 @@
     </xsl:template>
 
     <xsl:template match="uni:University">
-    <xsl:value-of select="concat('uni:', uni:Name)"/> a ex:University ;
+        <xsl:value-of select="concat('uni:', uni:Name)"/> a ex:University ;
             dcterms:title &quot;<xsl:value-of select="uni:Name"/>&quot;@<xsl:value-of select="uni:Name/@xml:lang"/> ;
             ex:universityID <xsl:value-of select="uni:id"/> ;
-            foaf:homepage &quot;<xsl:value-of select="uni:webPage"/>&quot; .
+            foaf:homepage &lt;<xsl:value-of select="uni:webPage"/>&gt; .
     </xsl:template>
 
     <xsl:template match="jani:Janitor">
-    <xsl:value-of select="concat('jani:', person:FirstName)"/> a ex:Janitor ;
+        <xsl:value-of select="concat('jani:', person:FirstName)"/> a ex:Janitor ;
             foaf:firstName &quot;<xsl:value-of select="person:FirstName"/>&quot;@<xsl:value-of select="person:FirstName/@xml:lang"/> ;
             <xsl:apply-templates select="person:MiddleNames/person:MiddleName"/>
             foaf:lastName &quot;<xsl:value-of select="person:LastName"/>&quot;@<xsl:value-of select="person:LastName/@xml:lang"/> ;

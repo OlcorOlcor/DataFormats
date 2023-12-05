@@ -13,12 +13,13 @@
     @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
     @prefix ex: &lt;http://example.org/vocabulary/&gt; .
     @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+    @prefix jani: &lt;http://www.our-example-data.org/janitor&gt; .
 
     <xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template match="jani:Janitor">
-    <xsl:value-of select="person:FirstName"/> a ex:Janitor ;
+    <xsl:value-of select="concat('jani:', person:FirstName)"/> a ex:Janitor ;
             foaf:firstName &quot;<xsl:value-of select="person:FirstName"/>&quot;@<xsl:value-of select="person:FirstName/@xml:lang"/>;
             <xsl:apply-templates select="person:MiddleNames/person:MiddleName" mode="true"/>
             foaf:lastName &quot;<xsl:value-of select="person:LastName"/>&quot;@<xsl:value-of select="person:LastName/@xml:lang"/> ;

@@ -9,6 +9,6 @@ xmlns:person="http://www.our-example-data.org/person/xsd">
         <person:MiddleNames></person:MiddleNames>
         <person:LastName xml:lang="cs">Vomáčková</person:LastName>
         <person:id>1</person:id>
-        <OwnsBroom>true</OwnsBroom>
+        <OwnsBroom>false</OwnsBroom>
     </Janitor>
 </Janitors>
