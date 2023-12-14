@@ -7,7 +7,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tabledormitories",
-            "url": "https://example.org/tabledormitories.csv",
+            "url": "data-1.csv",
             "tableSchema": {
                 "columns": [{
                     "name": "ID",
@@ -54,14 +54,13 @@
                         "cs": "ID Univerzity"
                     },          
                     "dc:description": "",
-                    "datatype": "number",
-                    "required": true
+                    "datatype": "number"
                 }],
                 "primaryKey": "ID",
                 "foreignKeys": [{
                     "columnReference": "ID_University",
                     "reference": {
-                        "resource": "https://example.org/tableuniversities.csv",
+                        "resource": "data-2.csv",
                         "columnReference": "ID"
                     }
                 }]
@@ -71,7 +70,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tableuniversities",
-            "url": "https://example.org/tableuniversities.csv",
+            "url": "data-2.csv",
             "tableSchema": {
                 "columns":[
                     {
@@ -109,7 +108,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tabledormitoryrooms",
-            "url": "https://example.org/tabledormitoryrooms.csv",
+            "url": "data-3.csv",
             "tableSchema": {
                 "columns":[
                     {
@@ -172,7 +171,7 @@
                 "foreignKeys": [{
                     "columnReference": "ID_Dormitory",
                     "reference": {
-                        "resource": "https://example.org/tabledormitories.csv",
+                        "resource": "data-1.csv",
                         "columnReference": "ID"
                     }
                 }]
@@ -181,7 +180,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tablepeople",
-            "url": "https://example.org/tablepeople.csv",
+            "url": "data-4.csv",
             "tableSchema": {
                 "columns":[
                     {
@@ -219,7 +218,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tablemiddlenames",
-            "url": "https://example.org/tablemiddlenames.csv",
+            "url": "data-5.csv",
             "tableSchema": {
                 "columns":[
                     {
@@ -255,7 +254,7 @@
                 "foreignKeys": [{
                     "columnReference": "ID_Person",
                     "reference": {
-                        "resource": "https://example.org/tablepeople.csv",
+                        "resource": "data-4.csv",
                         "columnReference": "ID"
                     }
                 }]
@@ -264,7 +263,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tablestudents",
-            "url": "https://example.org/tablestudents.csv",
+            "url": "data-6.csv",
             "tableSchema": {
                 "columns":[
                     {
@@ -300,13 +299,13 @@
                 "foreignKeys": [{
                     "columnReference": "ID_Dorm_Room",
                     "reference": {
-                        "resource": "https://example.org/tabledormrooms.csv",
+                        "resource": "data-3.csv",
                         "columnReference": "ID"
                     }               
                 }, {
                     "columnReference": "ID_Person",
                     "reference": {
-                        "resource": "https://example.org/tablepeople.csv",
+                        "resource": "data-4.csv",
                         "columnReference": "ID"
                     }
                 }]
@@ -315,7 +314,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tablestudiesat",
-            "url": "https://example.org/tablestudiesat.csv",
+            "url": "data-7.csv",
             "tableSchema": {
                 "columns":[
                     {
@@ -351,13 +350,13 @@
                 "foreignKeys": [{
                     "columnReference": "ID_Student",
                     "reference": {
-                        "resource": "https://example.org/tablestudents.csv",
+                        "resource": "data-6.csv",
                         "columnReference": "ID"
                     }               
                 }, {
                     "columnReference": "ID_University",
                     "reference": {
-                        "resource": "https://example.org/tableuniversities.csv",
+                        "resource": "data-2.csv",
                         "columnReference": "ID"
                     }
                 }]
@@ -366,7 +365,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tablejanitors",
-            "url": "https://example.org/tablejanitors.csv",
+            "url": "data-8.csv",
             "tableSchema": {
                 "columns":[
                     {
@@ -381,8 +380,8 @@
                     }, {
                         "name": "OwnsBroom",
                         "titles": {
-                            "en": "Whether they owns a broom",
-                            "cs": "Jestli vlastní koště"
+                            "en": "Owns a broom",
+                            "cs": "Vlastní koště"
                         },          
                         "dc:description": "",
                         "datatype": "boolean",
@@ -402,7 +401,7 @@
                 "foreignKeys": [{
                     "columnReference": "ID_Person",
                     "reference": {
-                        "resource": "https://example.org/tablepeople.csv",
+                        "resource": "data-4.csv",
                         "columnReference": "ID"
                     }
                 }]
@@ -411,7 +410,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tableworksin",
-            "url": "https://example.org/tableworksin.csv",
+            "url": "data-9.csv",
             "tableSchema": {
                 "columns":[
                     {
@@ -447,13 +446,13 @@
                 "foreignKeys": [{
                     "columnReference": "ID_Janitor",
                     "reference": {
-                        "resource": "https://example.org/tablejanitors.csv",
+                        "resource": "data-8.csv",
                         "columnReference": "ID"
                     }               
                 }, {
                     "columnReference": "ID_Dormitory",
                     "reference": {
-                        "resource": "https://example.org/tabledormitories.csv",
+                        "resource": "data-1.csv",
                         "columnReference": "ID"
                     }
                 }]
