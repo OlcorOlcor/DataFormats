@@ -1,0 +1,463 @@
+{
+    "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+    "@type": "TableGroup",
+    "@id": "https://example.org/TableGroup",
+    "tables": [
+        {
+            "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+            "@type": "Table",
+            "@id": "https://example.org/tabledormitories",
+            "url": "https://example.org/tabledormitories.csv",
+            "tableSchema": {
+                "columns": [{
+                    "name": "ID",
+                    "titles": {
+                        "en": "ID",
+                        "cs": "ID"
+                    },          
+                    "dc:description": "",
+                    "datatype": "number",
+                    "required": true
+                }, {
+                    "name": "Address",
+                    "titles": {
+                        "en": "Address",
+                        "cs": "Adresa"
+                    },          
+                    "dc:description": "",
+                    "datatype": "string",
+                    "lang": "en",
+                    "required": true
+                }, {
+                    "name": "Name",
+                    "titles": {
+                        "en": "Name",
+                        "cs": "Jméno"
+                    },          
+                    "dc:description": "",
+                    "datatype": "string",
+                    "lang": "en",
+                    "required": true
+                }, {
+                    "name": "HasBedBugs",
+                    "titles": {
+                        "en": "Has bed bugs",
+                        "cs": "Jsou tam štěnice"
+                    },          
+                    "dc:description": "",
+                    "datatype": "boolean",
+                    "required": true
+                }, {
+                    "name": "ID_University",
+                    "titles": {
+                        "en": "University ID",
+                        "cs": "ID Univerzity"
+                    },          
+                    "dc:description": "",
+                    "datatype": "number",
+                    "required": true
+                }],
+                "primaryKey": "ID",
+                "foreignKeys": [{
+                    "columnReference": "ID_University",
+                    "reference": {
+                        "resource": "https://example.org/tableuniversities.csv",
+                        "columnReference": "ID"
+                    }
+                }]
+            }
+        },
+        {
+            "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+            "@type": "Table",
+            "@id": "https://example.org/tableuniversities",
+            "url": "https://example.org/tableuniversities.csv",
+            "tableSchema": {
+                "columns":[
+                    {
+                        "name": "ID",
+                        "titles": {
+                            "en": "ID",
+                            "cs": "ID"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "Name",
+                        "titles": {
+                            "en": "Name",
+                            "cs": "Jmeno"
+                        },          
+                        "dc:description": "",
+                        "datatype": "string",
+                        "required": true
+                    }, {
+                        "name": "WebPage",
+                        "titles": {
+                            "en": "Web page",
+                            "cs": "Webová stránka"
+                        },          
+                        "dc:description": "",
+                        "datatype": "anyURI",
+                        "required": true
+                    }
+                ],
+                "primaryKey": "ID"
+            }            
+        }, {
+            "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+            "@type": "Table",
+            "@id": "https://example.org/tabledormitoryrooms",
+            "url": "https://example.org/tabledormitoryrooms.csv",
+            "tableSchema": {
+                "columns":[
+                    {
+                        "name": "ID",
+                        "titles": {
+                            "en": "ID",
+                            "cs": "ID"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "Floor",
+                        "titles": {
+                            "en": "Floor",
+                            "cs": "Podlaží"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "Number",
+                        "titles": {
+                            "en": "Room number",
+                            "cs": "Číslo pokoje"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "Capacity",
+                        "titles": {
+                            "en": "Capacity",
+                            "cs": "Kapacita"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "HasToilet",
+                        "titles": {
+                            "en": "Has toilet",
+                            "cs": "Má toaletu"
+                        },          
+                        "dc:description": "",
+                        "datatype": "boolean",
+                        "required": true
+                    }, {
+                        "name": "ID_Dormitory",
+                        "titles": {
+                            "en": "Dormitory ID",
+                            "cs": "ID koleje"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys": [{
+                    "columnReference": "ID_Dormitory",
+                    "reference": {
+                        "resource": "https://example.org/tabledormitories.csv",
+                        "columnReference": "ID"
+                    }
+                }]
+            }            
+        },  {
+            "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+            "@type": "Table",
+            "@id": "https://example.org/tablepeople",
+            "url": "https://example.org/tablepeople.csv",
+            "tableSchema": {
+                "columns":[
+                    {
+                        "name": "ID",
+                        "titles": {
+                            "en": "ID",
+                            "cs": "ID"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "FirstName",
+                        "titles": {
+                            "en": "First name",
+                            "cs": "Křestní jméno"
+                        },          
+                        "dc:description": "",
+                        "datatype": "string",
+                        "required": true
+                    }, {
+                        "name": "LastName",
+                        "titles": {
+                            "en": "Last name",
+                            "cs": "Příjmení"
+                        },          
+                        "dc:description": "",
+                        "datatype": "string",
+                        "required": true
+                    }
+                ],
+                "primaryKey": "ID"
+            }            
+        },  {
+            "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+            "@type": "Table",
+            "@id": "https://example.org/tablemiddlenames",
+            "url": "https://example.org/tablemiddlenames.csv",
+            "tableSchema": {
+                "columns":[
+                    {
+                        "name": "ID",
+                        "titles": {
+                            "en": "ID",
+                            "cs": "ID"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "Name",
+                        "titles": {
+                            "en": "One middle name",
+                            "cs": "Jedno prostřední jméno"
+                        },          
+                        "dc:description": "",
+                        "datatype": "string",
+                        "required": true
+                    }, {
+                        "name": "ID_Person",
+                        "titles": {
+                            "en": "Person ID",
+                            "cs": "ID člověka"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys": [{
+                    "columnReference": "ID_Person",
+                    "reference": {
+                        "resource": "https://example.org/tablepeople.csv",
+                        "columnReference": "ID"
+                    }
+                }]
+            }            
+        },  {
+            "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+            "@type": "Table",
+            "@id": "https://example.org/tablestudents",
+            "url": "https://example.org/tablestudents.csv",
+            "tableSchema": {
+                "columns":[
+                    {
+                        "name": "ID",
+                        "titles": {
+                            "en": "ID",
+                            "cs": "ID"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "ID_Dorm_Room",
+                        "titles": {
+                            "en": "Dorm room ID",
+                            "cs": "ID pokoje"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "ID_Person",
+                        "titles": {
+                            "en": "Person ID",
+                            "cs": "ID člověka"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys": [{
+                    "columnReference": "ID_Dorm_Room",
+                    "reference": {
+                        "resource": "https://example.org/tabledormrooms.csv",
+                        "columnReference": "ID"
+                    }               
+                }, {
+                    "columnReference": "ID_Person",
+                    "reference": {
+                        "resource": "https://example.org/tablepeople.csv",
+                        "columnReference": "ID"
+                    }
+                }]
+            }            
+        },  {
+            "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+            "@type": "Table",
+            "@id": "https://example.org/tablestudiesat",
+            "url": "https://example.org/tablestudiesat.csv",
+            "tableSchema": {
+                "columns":[
+                    {
+                        "name": "ID",
+                        "titles": {
+                            "en": "ID",
+                            "cs": "ID"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "ID_Student",
+                        "titles": {
+                            "en": "Student ID",
+                            "cs": "ID studenta"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "ID_University",
+                        "titles": {
+                            "en": "University ID",
+                            "cs": "ID Univerzity"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys": [{
+                    "columnReference": "ID_Student",
+                    "reference": {
+                        "resource": "https://example.org/tablestudents.csv",
+                        "columnReference": "ID"
+                    }               
+                }, {
+                    "columnReference": "ID_University",
+                    "reference": {
+                        "resource": "https://example.org/tableuniversities.csv",
+                        "columnReference": "ID"
+                    }
+                }]
+            }            
+        },  {
+            "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+            "@type": "Table",
+            "@id": "https://example.org/tablejanitors",
+            "url": "https://example.org/tablejanitors.csv",
+            "tableSchema": {
+                "columns":[
+                    {
+                        "name": "ID",
+                        "titles": {
+                            "en": "ID",
+                            "cs": "ID"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "OwnsBroom",
+                        "titles": {
+                            "en": "Whether they owns a broom",
+                            "cs": "Jestli vlastní koště"
+                        },          
+                        "dc:description": "",
+                        "datatype": "boolean",
+                        "required": true
+                    }, {
+                        "name": "ID_Person",
+                        "titles": {
+                            "en": "Person ID",
+                            "cs": "ID člověka"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys": [{
+                    "columnReference": "ID_Person",
+                    "reference": {
+                        "resource": "https://example.org/tablepeople.csv",
+                        "columnReference": "ID"
+                    }
+                }]
+            }            
+        },  {
+            "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+            "@type": "Table",
+            "@id": "https://example.org/tableworksin",
+            "url": "https://example.org/tableworksin.csv",
+            "tableSchema": {
+                "columns":[
+                    {
+                        "name": "ID",
+                        "titles": {
+                            "en": "ID",
+                            "cs": "ID"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "ID_Janitor",
+                        "titles": {
+                            "en": "Janitor ID",
+                            "cs": "ID školníka"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }, {
+                        "name": "ID_Dormitory",
+                        "titles": {
+                            "en": "Dormitory ID",
+                            "cs": "ID koleje"
+                        },          
+                        "dc:description": "",
+                        "datatype": "number",
+                        "required": true
+                    }
+                ],
+                "primaryKey": "ID",
+                "foreignKeys": [{
+                    "columnReference": "ID_Janitor",
+                    "reference": {
+                        "resource": "https://example.org/tablejanitors.csv",
+                        "columnReference": "ID"
+                    }               
+                }, {
+                    "columnReference": "ID_Dormitory",
+                    "reference": {
+                        "resource": "https://example.org/tabledormitories.csv",
+                        "columnReference": "ID"
+                    }
+                }]
+            }            
+        }
+    ] 
+}
