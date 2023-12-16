@@ -7,6 +7,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tabledormitories",
+            "aboutUrl": "http://www.our-example-data.org/dormitory/{+ID}",
             "url": "data-1.csv",
             "tableSchema": {
                 "columns": [{
@@ -15,38 +16,43 @@
                         "en": "ID",
                         "cs": "ID"
                     },          
-                    "dc:description": "",
-                    "datatype": "number",
-                    "required": true
+                    "dc:description": "Dormitory identificator used in URI.",
+                    "datatype": "string",
+                    "required": true,
+                    "propertyUrl": "rdf:type",
+                    "valueUrl": "http://example.org/vocabulary/Dormitory"
                 }, {
                     "name": "Address",
                     "titles": {
                         "en": "Address",
                         "cs": "Adresa"
                     },          
-                    "dc:description": "",
+                    "dc:description": "Address of the dormitory.",
                     "datatype": "string",
                     "lang": "en",
-                    "required": true
+                    "required": true,
+                    "propertyUrl": "http://example.org/vocabulary/dormitoryAddress"
                 }, {
                     "name": "Name",
                     "titles": {
                         "en": "Name",
                         "cs": "Jméno"
                     },          
-                    "dc:description": "",
+                    "dc:description": "Name of the dormitory.",
                     "datatype": "string",
                     "lang": "en",
-                    "required": true
+                    "required": true,
+                    "propertyUrl": "dc:title"
                 }, {
                     "name": "HasBedBugs",
                     "titles": {
                         "en": "Has bed bugs",
                         "cs": "Jsou tam štěnice"
                     },          
-                    "dc:description": "",
+                    "dc:description": "If dormitory has bed bugs.",
                     "datatype": "boolean",
-                    "required": true
+                    "required": true,
+                    "propertyUrl": "http://example.org/vocabulary/hasBedBugs"
                 }, {
                     "name": "ID_University",
                     "titles": {
@@ -54,7 +60,9 @@
                         "cs": "ID Univerzity"
                     },          
                     "dc:description": "",
-                    "datatype": "number"
+                    "datatype": "string",
+                    "propertyUrl": "http://example.org/vocabulary/belongsTo",
+                    "valueUrl": "http://www.our-example-data.org/university/{ID_University}"
                 }],
                 "primaryKey": "ID",
                 "foreignKeys": [{
@@ -80,7 +88,7 @@
                             "cs": "ID"
                         },          
                         "dc:description": "",
-                        "datatype": "number",
+                        "datatype": "string",
                         "required": true
                     }, {
                         "name": "Name",

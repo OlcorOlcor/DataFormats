@@ -1,0 +1,71 @@
+<http://www.our-example-data.org/dormitory/Strahov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Dormitory> .
+<http://www.our-example-data.org/dormitory/Strahov> <http://example.org/vocabulary/dormitoryAddress> "Praha Vaníčkova 315/7"@en .
+<http://www.our-example-data.org/dormitory/Strahov> <http://purl.org/dc/terms/title> "Strahov"@en .
+<http://www.our-example-data.org/dormitory/Strahov> <http://example.org/vocabulary/hasBedBugs> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.our-example-data.org/dormitory/17listopad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Dormitory> .
+<http://www.our-example-data.org/dormitory/17listopad> <http://example.org/vocabulary/dormitoryAddress> "Praha Pátkova 2136/3"@en .
+<http://www.our-example-data.org/dormitory/17listopad> <http://purl.org/dc/terms/title> "17. Listopadu"@en .
+<http://www.our-example-data.org/dormitory/17listopad> <http://example.org/vocabulary/hasBedBugs> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.our-example-data.org/dormitory/17listopad> <http://example.org/vocabulary/belongsTo> <http://www.our-example-data.org/university/CharlesUniversity> .
+<http://www.our-example-data.org/dormitory/CambridgeDorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Dormitory> .
+<http://www.our-example-data.org/dormitory/CambridgeDorm> <http://example.org/vocabulary/dormitoryAddress> "Cambridge O'Brians street"@en .
+<http://www.our-example-data.org/dormitory/CambridgeDorm> <http://purl.org/dc/terms/title> "Cambridge Dormitory"@en .
+<http://www.our-example-data.org/dormitory/CambridgeDorm> <http://example.org/vocabulary/hasBedBugs> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.our-example-data.org/dormitory/CambridgeDorm> <http://example.org/vocabulary/belongsTo> <http://www.our-example-data.org/university/Cambridge> .
+_:g452740 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-2.csv#ID> "Cambridge" .
+_:g452740 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-2.csv#Name> "Cambridge University" .
+_:g452740 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-2.csv#WebPage> "https://www.cam.ac.uk"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:g452780 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-2.csv#ID> "CharlesUniversity" .
+_:g452780 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-2.csv#Name> "Charles University" .
+_:g452780 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-2.csv#WebPage> "https://cuni.cz"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:g452820 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-2.csv#ID> "Harvard" .
+_:g452820 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-2.csv#Name> "Harvard University" .
+_:g452820 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-2.csv#WebPage> "https://pll.harvard.edu"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+_:g452860 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#ID> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452860 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#Floor> "0"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452860 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#Number> "10"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452860 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#Capacity> "2"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452860 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#HasToilet> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:g452860 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#ID_Dormitory> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452900 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#ID> "2"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452900 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#Floor> "100"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452900 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#Number> "1000"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452900 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#Capacity> "3"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452900 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#HasToilet> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:g452900 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#ID_Dormitory> "2"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452940 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#ID> "3"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452940 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#Floor> "42"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452940 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#Number> "421"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452940 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#Capacity> "4"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452940 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#HasToilet> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:g452940 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-3.csv#ID_Dormitory> "3"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452980 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-4.csv#ID> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g452980 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-4.csv#FirstName> "Marcela" .
+_:g452980 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-4.csv#LastName> "Vomáčková" .
+_:g453020 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-4.csv#ID> "86"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453020 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-4.csv#FirstName> "David" .
+_:g453020 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-4.csv#LastName> "Petera" .
+_:g453060 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-5.csv#ID> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453060 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-5.csv#Name> "Honza" .
+_:g453060 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-5.csv#ID_Person> "86"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453100 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-5.csv#ID> "2"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453100 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-5.csv#Name> "Terka" .
+_:g453100 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-5.csv#ID_Person> "86"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453140 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-5.csv#ID> "3"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453140 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-5.csv#Name> "Honza" .
+_:g453140 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-5.csv#ID_Person> "86"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453180 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-6.csv#ID> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453180 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-6.csv#ID_Dorm_Room> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453180 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-6.csv#ID_Person> "86"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453220 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-7.csv#ID> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453220 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-7.csv#ID_Student> "86"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453220 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-7.csv#ID_University> "2"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453260 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-8.csv#ID> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453260 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-8.csv#OwnsBroom> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:g453260 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-8.csv#ID_Person> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453300 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453300 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID_Janitor> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453300 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID_Dormitory> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453340 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID> "2"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453340 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID_Janitor> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
+_:g453340 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID_Dormitory> "3"^^<http://www.w3.org/2001/XMLSchema#double> .
