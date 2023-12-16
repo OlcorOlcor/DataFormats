@@ -1,4 +1,4 @@
-ID, Name, Web page
-Cambridge,"Cambridge University",https://www.cam.ac.uk
-CharlesUniversity,"Charles University",https://cuni.cz
-Harvard,"Harvard University",https://pll.harvard.edu
+ID, Name, Web page, University ID
+Cambridge,"Cambridge University",https://www.cam.ac.uk,1
+CharlesUniversity,"Charles University",https://cuni.cz,2
+Harvard,"Harvard University",https://pll.harvard.edu,3
