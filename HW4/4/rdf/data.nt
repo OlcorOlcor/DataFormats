@@ -17,16 +17,19 @@
 <http://www.our-example-data.org/university/Cambridge> <http://xmlns.com/foaf/0.1/homepage> <https://www.cam.ac.uk> .
 <http://www.our-example-data.org/university/Cambridge> <http://example.org/vocabulary/universityID> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://www.cam.ac.uk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<https://www.cam.ac.uk> <http://xmlns.com/foaf/0.1/name> "Cambridge"@en .
 <http://www.our-example-data.org/university/CharlesUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/University> .
 <http://www.our-example-data.org/university/CharlesUniversity> <http://purl.org/dc/terms/title> "Charles University"@en .
 <http://www.our-example-data.org/university/CharlesUniversity> <http://xmlns.com/foaf/0.1/homepage> <https://cuni.cz> .
 <http://www.our-example-data.org/university/CharlesUniversity> <http://example.org/vocabulary/universityID> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://cuni.cz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<https://cuni.cz> <http://xmlns.com/foaf/0.1/name> "CharlesUniversity"@en .
 <http://www.our-example-data.org/university/Harvard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/University> .
 <http://www.our-example-data.org/university/Harvard> <http://purl.org/dc/terms/title> "Harvard University"@en .
 <http://www.our-example-data.org/university/Harvard> <http://xmlns.com/foaf/0.1/homepage> <https://pll.harvard.edu> .
 <http://www.our-example-data.org/university/Harvard> <http://example.org/vocabulary/universityID> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://pll.harvard.edu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<https://pll.harvard.edu> <http://xmlns.com/foaf/0.1/name> "Harvard"@en .
 <http://www.our-example-data.org/dorm-room/Strahov10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/DormRoom> .
 <http://www.our-example-data.org/dorm-room/Strahov10> <http://example.org/vocabulary/floor> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://www.our-example-data.org/dorm-room/Strahov10> <http://example.org/vocabulary/number> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .

@@ -130,11 +130,6 @@
                         "propertyUrl": "rdf:type",
                         "valueUrl": "foaf:Document",
                         "virtual": true
-                    }, {
-                        "aboutUrl": "{+WebPage}",
-                        "propertyUrl": "foaf:name",
-                        "stringValue": "{+Name}",
-                        "virtual": true
                     }
                 ],
                 "primaryKey": "ID"
@@ -566,6 +561,39 @@
                         "columnReference": "ID"
                     }
                 }]
+            }            
+        },  {
+            "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
+            "@type": "Table",
+            "@id": "https://example.org/websitedocuments",
+            "aboutUrl": "{+ID}",
+            "url": "data-10.csv",
+            "tableSchema": {
+                "columns":[
+                    {
+                        "name": "ID",
+                        "titles": {
+                            "en": "ID",
+                            "cs": "ID"
+                        },          
+                        "dc:description": "ID of the website resource aka. URI.",
+                        "datatype": "anyURI",
+                        "required": true,
+                        "suppressOutput": true
+                    }, {
+                        "name": "Name",
+                        "titles": {
+                            "en": "Name",
+                            "cs": "Jméno"
+                        },          
+                        "dc:description": "Name of the resource.",
+                        "datatype": "string",
+                        "lang": "en",
+                        "required": true,
+                        "propertyUrl": "foaf:name"
+                    }
+                ],
+                "primaryKey": "ID"
             }            
         }
     ] 
