@@ -1,6 +1,0 @@
-<http://www.our-example-data.org/university/Harvard> <http://example.org/vocabulary/universityID> "3"^^<http://www.w3.org/2001/XMLSchema#/integer> .
-<http://www.our-example-data.org/university/Harvard> <http://purl.org/dc/terms/title> "Harvard"@en .
-<http://www.our-example-data.org/university/Harvard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/University> .
-<http://www.our-example-data.org/university/Harvard> <http://xmlns.com/foaf/0.1/homepage> <https://pll.harvard.edu> .
-<https://pll.harvard.edu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
-<https://pll.harvard.edu> <http://xmlns.com/foaf/0.1/name> "Harvard"@en .

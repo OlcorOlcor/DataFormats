@@ -1,6 +1,0 @@
-<http://www.our-example-data.org/student/David> <http://example.org/vocabulary/middleName> "Honza"@cs .
-<http://www.our-example-data.org/student/David> <http://example.org/vocabulary/middleName> "Terka"@cs .
-<http://www.our-example-data.org/student/David> <http://example.org/vocabulary/personID> "86"^^<http://www.w3.org/2001/XMLSchema#/integer> .
-<http://www.our-example-data.org/student/David> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Student> .
-<http://www.our-example-data.org/student/David> <http://xmlns.com/foaf/0.1/firstName> "David"@cs .
-<http://www.our-example-data.org/student/David> <http://xmlns.com/foaf/0.1/lastName> "Petera"@cs .

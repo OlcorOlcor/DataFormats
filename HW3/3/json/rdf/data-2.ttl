@@ -1,0 +1,7 @@
+<http://www.our-example-data.org/student/David>
+        <http://example.org/vocabulary/middleName>  "Honza"@cs ;
+        <http://example.org/vocabulary/middleName>  "Terka"@cs ;
+        <http://example.org/vocabulary/personID>  "86"^^<http://www.w3.org/2001/XMLSchema#/integer> ;
+        a       <http://example.org/vocabulary/Student> ;
+        <http://xmlns.com/foaf/0.1/firstName>  "David"@cs ;
+        <http://xmlns.com/foaf/0.1/lastName>  "Petera"@cs .

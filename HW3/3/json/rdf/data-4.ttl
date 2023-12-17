@@ -1,0 +1,17 @@
+<http://www.our-example-data.org/student/David>
+        <http://example.org/vocabulary/middleName>  "Honza"@cs ;
+        <http://example.org/vocabulary/middleName>  "Terka"@cs ;
+        <http://example.org/vocabulary/personID>  "86"^^<http://www.w3.org/2001/XMLSchema#/integer> ;
+        <http://example.org/vocabulary/studiesAt>  <http://www.our-example-data.org/university/CharlesUniversity> ;
+        a       <http://example.org/vocabulary/Student> ;
+        <http://xmlns.com/foaf/0.1/firstName>  "David"@cs ;
+        <http://xmlns.com/foaf/0.1/lastName>  "Petera"@cs .
+
+<http://www.our-example-data.org/university/CharlesUniversity>
+        <http://example.org/vocabulary/universityID>  "2"^^<http://www.w3.org/2001/XMLSchema#/integer> ;
+        <http://purl.org/dc/terms/title>  "Charles university"@en ;
+        a       <http://example.org/vocabulary/University> ;
+        <http://xmlns.com/foaf/0.1/homepage>  <https://cuni.cz/> .
+
+<https://cuni.cz/>  <http://example.org/vocabulary/middleName>  "CharlesUniversity"@en ;
+        a       <http://xmlns.com/foaf/0.1/Document> .

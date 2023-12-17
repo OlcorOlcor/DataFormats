@@ -1,0 +1,21 @@
+<dorm:17listopad>  <http://example.org/vocabulary/belongsTo>  <http://www.our-example-data.org/university/CharlesUniversity> ;
+        <http://example.org/vocabulary/dormitoryAddress>  "Praha Pátkova 2136/3"@cs ;
+        <http://example.org/vocabulary/hasBedBugs>  "false"^^<http://www.w3.org/2001/XMLSchema#/boolean> ;
+        <http://purl.org/dc/terms/title>  "17. Listopadu"@cs ;
+        a       <http://example.org/vocabulary/Dormitory> .
+
+<http://www.our-example-data.org/dorm-room/17listopad1000>
+        <http://example.org/vocabulary/capacity>  "3"^^<http://www.w3.org/2001/XMLSchema#/integer> ;
+        <http://example.org/vocabulary/floor>  "100"^^<http://www.w3.org/2001/XMLSchema#/integer> ;
+        <http://example.org/vocabulary/hasToilet>  "true"^^<http://www.w3.org/2001/XMLSchema#/boolean> ;
+        <http://example.org/vocabulary/isIn>  <dorm:17listopad> ;
+        <http://example.org/vocabulary/number>  "1000"^^<http://www.w3.org/2001/XMLSchema#/integer> ;
+        a       <http://example.org/vocabulary/DormRoom> .
+
+<http://www.our-example-data.org/university/CharlesUniversity>
+        <http://example.org/vocabulary/universityID>  "2"^^<http://www.w3.org/2001/XMLSchema#/integer> ;
+        <http://purl.org/dc/terms/title>  "Charles university"@en ;
+        a       <http://example.org/vocabulary/University> ;
+        <http://xmlns.com/foaf/0.1/homepage>  <https://cuni.cz/> .
+
+<https://cuni.cz/>  a  <http://xmlns.com/foaf/0.1/Document> .

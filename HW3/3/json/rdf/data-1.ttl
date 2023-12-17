@@ -1,0 +1,9 @@
+<http://www.our-example-data.org/university/Harvard>
+        <http://example.org/vocabulary/universityID>  "3"^^<http://www.w3.org/2001/XMLSchema#/integer> ;
+        <http://purl.org/dc/terms/title>  "Harvard"@en ;
+        a       <http://example.org/vocabulary/University> ;
+        <http://xmlns.com/foaf/0.1/homepage>  <https://pll.harvard.edu> .
+
+<https://pll.harvard.edu>
+        a       <http://xmlns.com/foaf/0.1/Document> ;
+        <http://xmlns.com/foaf/0.1/name>  "Harvard"@en .
