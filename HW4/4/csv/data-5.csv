@@ -1,4 +1,4 @@
-ID,One middle name,Person ID
-1,"Honza",David
-2,"Terka",David
-3,"Honza",David
+ID,One middle name,Person ID,Person position
+1,"Honza",David,student
+2,"Terka",David,student
+3,"Honza",David,student

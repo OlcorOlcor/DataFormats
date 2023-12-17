@@ -101,6 +101,7 @@
                         },          
                         "dc:description": "Name of the university.",
                         "datatype": "string",
+                        "lang": "en",
                         "required": true,
                         "propertyUrl": "dc:title"
                     }, {
@@ -223,7 +224,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tablepeople",
-            "aboutUrl": "http://www.our-example-data.org/person/{+ID}",
+            "aboutUrl": "http://www.our-example-data.org/{+Position}/{+ID}",
             "url": "data-4.csv",
             "tableSchema": {
                 "columns":[
@@ -246,6 +247,7 @@
                         },          
                         "dc:description": "First name of the person.",
                         "datatype": "string",
+                        "lang": "cs",
                         "required": true,
                         "propertyUrl": "foaf:firstName"
                     }, {
@@ -256,6 +258,7 @@
                         },          
                         "dc:description": "Last name of the person.",
                         "datatype": "string",
+                        "lang": "cs",
                         "required": true,
                         "propertyUrl": "foaf:lastName"
                     },  {
@@ -268,6 +271,16 @@
                         "datatype": "integer",
                         "required": true,
                         "propertyUrl": "http://example.org/vocabulary/personID"
+                    },  {
+                        "name": "Position",
+                        "titles": {
+                            "en": "Position",
+                            "cs": "Pozice"
+                        },          
+                        "dc:description": "Position of the person.",
+                        "datatype": "string",
+                        "required": true,
+                        "suppressOutput": true
                     }
                 ],
                 "primaryKey": "ID"
@@ -276,7 +289,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tablemiddlenames",
-            "aboutUrl": "http://www.our-example-data.org/person/{+ID_Person}",
+            "aboutUrl": "http://www.our-example-data.org/{+Person_position}/{+ID_Person}",
             "propertyUrl": "http://example.org/vocabulary/middleName",
             "url": "data-5.csv",
             "tableSchema": {
@@ -299,6 +312,7 @@
                         },          
                         "dc:description": "Middle names of the person.",
                         "datatype": "string",
+                        "lang": "cs",
                         "required": true
                     }, {
                         "name": "ID_Person",
@@ -309,6 +323,16 @@
                         "dc:description": "ID of the person with the middle name.",
                         "datatype": "string",
                         "required": true
+                    },  {
+                        "name": "Person_position",
+                        "titles": {
+                            "en": "Person position",
+                            "cs": "Pozice člověka"
+                        },          
+                        "dc:description": "Position of the person with the middle name.",
+                        "datatype": "string",
+                        "required": true,
+                        "suppressOutput": true
                     }
                 ],
                 "primaryKey": "ID",
@@ -318,13 +342,19 @@
                         "resource": "data-4.csv",
                         "columnReference": "ID"
                     }
+                },{
+                    "columnReference": "Person_position",
+                    "reference": {
+                        "resource": "data-4.csv",
+                        "columnReference": "Position"
+                    }
                 }]
             }            
         },  {
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tablestudents",
-            "aboutUrl": "http://www.our-example-data.org/person/{+ID_Person}",
+            "aboutUrl": "http://www.our-example-data.org/student/{+ID_Person}",
             "url": "data-6.csv",
             "tableSchema": {
                 "columns":[
@@ -380,6 +410,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tablestudiesat",
+            "aboutUrl": "http://www.our-example-data.org/student/{+ID_Student}",
             "url": "data-7.csv",
             "tableSchema": {
                 "columns":[
@@ -389,27 +420,31 @@
                             "en": "ID",
                             "cs": "ID"
                         },          
-                        "dc:description": "",
+                        "dc:description": "Table ID of the study logs.",
                         "datatype": "number",
-                        "required": true
+                        "required": true,
+                        "suppressOutput": true
                     }, {
                         "name": "ID_Student",
                         "titles": {
                             "en": "Student ID",
                             "cs": "ID studenta"
                         },          
-                        "dc:description": "",
+                        "dc:description": "ID of the student that is studying at some university.",
                         "datatype": "string",
-                        "required": true
+                        "required": true,
+                        "suppressOutput": true
                     }, {
                         "name": "ID_University",
                         "titles": {
                             "en": "University ID",
                             "cs": "ID Univerzity"
                         },          
-                        "dc:description": "",
+                        "dc:description": "ID of the university the student studies at.",
                         "datatype": "string",
-                        "required": true
+                        "required": true,
+                        "propertyUrl": "http://example.org/vocabulary/studiesAt",
+                        "valueUrl": "http://example.org/vocabulary/University/{+ID_University}"
                     }
                 ],
                 "primaryKey": "ID",
@@ -431,6 +466,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tablejanitors",
+            "aboutUrl": "http://www.our-example-data.org/janitor/{+ID_Person}",
             "url": "data-8.csv",
             "tableSchema": {
                 "columns":[
@@ -440,27 +476,30 @@
                             "en": "ID",
                             "cs": "ID"
                         },          
-                        "dc:description": "",
+                        "dc:description": "Table ID of the janitor.",
                         "datatype": "number",
-                        "required": true
+                        "required": true,
+                        "suppressOutput": true
                     }, {
                         "name": "OwnsBroom",
                         "titles": {
                             "en": "Owns a broom",
                             "cs": "Vlastní koště"
                         },          
-                        "dc:description": "",
+                        "dc:description": "Boolean if the janitor owns a broom.",
                         "datatype": "boolean",
-                        "required": true
+                        "required": true,
+                        "propertyUrl": "http://example.org/vocabulary/ownsBroom"
                     }, {
                         "name": "ID_Person",
                         "titles": {
                             "en": "Person ID",
                             "cs": "ID člověka"
                         },          
-                        "dc:description": "",
-                        "datatype": "number",
-                        "required": true
+                        "dc:description": "ID of a person that is janitor.",
+                        "datatype": "string",
+                        "required": true,
+                        "suppressOutput": true
                     }
                 ],
                 "primaryKey": "ID",
@@ -476,6 +515,7 @@
             "@context": ["http://www.w3.org/ns/csvw", {"@language": "en"}],
             "@type": "Table",
             "@id": "https://example.org/tableworksin",
+            "aboutUrl": "http://www.our-example-data.org/janitor/{+ID_Janitor}",
             "url": "data-9.csv",
             "tableSchema": {
                 "columns":[
@@ -485,27 +525,31 @@
                             "en": "ID",
                             "cs": "ID"
                         },          
-                        "dc:description": "",
+                        "dc:description": "Table ID of the work relationship.",
                         "datatype": "number",
-                        "required": true
+                        "required": true,
+                        "suppressOutput": true
                     }, {
                         "name": "ID_Janitor",
                         "titles": {
                             "en": "Janitor ID",
                             "cs": "ID školníka"
                         },          
-                        "dc:description": "",
-                        "datatype": "number",
-                        "required": true
+                        "dc:description": "ID of the janitor.",
+                        "datatype": "string",
+                        "required": true,
+                        "suppressOutput": true
                     }, {
                         "name": "ID_Dormitory",
                         "titles": {
                             "en": "Dormitory ID",
                             "cs": "ID koleje"
                         },          
-                        "dc:description": "",
-                        "datatype": "number",
-                        "required": true
+                        "dc:description": "ID of the dormitory.",
+                        "datatype": "string",
+                        "required": true,
+                        "propertyUrl": "http://example.org/vocabulary/worksIn",
+                        "valueUrl": "http://www.our-example-data.org/dormitory/{+ID_Dormitory}"
                     }
                 ],
                 "primaryKey": "ID",

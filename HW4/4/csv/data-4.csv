@@ -1,3 +1,3 @@
-ID,First name,Last name,Person ID
-Marcela,"Marcela","Vomáčková",1
-David,"David","Petera",86
+ID,First name,Last name,Person ID,Position
+Marcela,"Marcela","Vomáčková",1,janitor
+David,"David","Petera",86,student

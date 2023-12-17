@@ -13,17 +13,17 @@
 <http://www.our-example-data.org/dormitory/CambridgeDorm> <http://example.org/vocabulary/hasBedBugs> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://www.our-example-data.org/dormitory/CambridgeDorm> <http://example.org/vocabulary/belongsTo> <http://www.our-example-data.org/university/Cambridge> .
 <http://www.our-example-data.org/university/Cambridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/University> .
-<http://www.our-example-data.org/university/Cambridge> <http://purl.org/dc/terms/title> "Cambridge University" .
+<http://www.our-example-data.org/university/Cambridge> <http://purl.org/dc/terms/title> "Cambridge University"@en .
 <http://www.our-example-data.org/university/Cambridge> <http://xmlns.com/foaf/0.1/homepage> <https://www.cam.ac.uk> .
 <http://www.our-example-data.org/university/Cambridge> <http://example.org/vocabulary/universityID> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://www.cam.ac.uk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
 <http://www.our-example-data.org/university/CharlesUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/University> .
-<http://www.our-example-data.org/university/CharlesUniversity> <http://purl.org/dc/terms/title> "Charles University" .
+<http://www.our-example-data.org/university/CharlesUniversity> <http://purl.org/dc/terms/title> "Charles University"@en .
 <http://www.our-example-data.org/university/CharlesUniversity> <http://xmlns.com/foaf/0.1/homepage> <https://cuni.cz> .
 <http://www.our-example-data.org/university/CharlesUniversity> <http://example.org/vocabulary/universityID> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://cuni.cz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
 <http://www.our-example-data.org/university/Harvard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/University> .
-<http://www.our-example-data.org/university/Harvard> <http://purl.org/dc/terms/title> "Harvard University" .
+<http://www.our-example-data.org/university/Harvard> <http://purl.org/dc/terms/title> "Harvard University"@en .
 <http://www.our-example-data.org/university/Harvard> <http://xmlns.com/foaf/0.1/homepage> <https://pll.harvard.edu> .
 <http://www.our-example-data.org/university/Harvard> <http://example.org/vocabulary/universityID> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://pll.harvard.edu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
@@ -45,27 +45,19 @@
 <http://www.our-example-data.org/dorm-room/CambridgeDorm421> <http://example.org/vocabulary/capacity> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://www.our-example-data.org/dorm-room/CambridgeDorm421> <http://example.org/vocabulary/hasToilet> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://www.our-example-data.org/dorm-room/CambridgeDorm421> <http://example.org/vocabulary/isIn> <http://www.our-example-data.org/dormitory/CambridgeDorm> .
-<http://www.our-example-data.org/person/Marcela> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Person> .
-<http://www.our-example-data.org/person/Marcela> <http://xmlns.com/foaf/0.1/firstName> "Marcela" .
-<http://www.our-example-data.org/person/Marcela> <http://xmlns.com/foaf/0.1/lastName> "Vomáčková" .
-<http://www.our-example-data.org/person/Marcela> <http://example.org/vocabulary/personID> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<http://www.our-example-data.org/person/David> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Person> .
-<http://www.our-example-data.org/person/David> <http://xmlns.com/foaf/0.1/firstName> "David" .
-<http://www.our-example-data.org/person/David> <http://xmlns.com/foaf/0.1/lastName> "Petera" .
-<http://www.our-example-data.org/person/David> <http://example.org/vocabulary/personID> "86"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<http://www.our-example-data.org/person/David> <http://example.org/vocabulary/middleName> "Honza" .
-<http://www.our-example-data.org/person/David> <http://example.org/vocabulary/middleName> "David" .
-<http://www.our-example-data.org/person/David> <http://example.org/vocabulary/middleName> "Terka" .
-<http://www.our-example-data.org/person/David> <http://example.org/vocabulary/staysIn> <http://example.org/vocabulary/DormRoom/Strahov10> .
-_:g453220 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-7.csv#ID> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
-_:g453220 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-7.csv#ID_Student> "86" .
-_:g453220 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-7.csv#ID_University> "2" .
-_:g453260 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-8.csv#ID> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
-_:g453260 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-8.csv#OwnsBroom> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:g453260 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-8.csv#ID_Person> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
-_:g453300 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
-_:g453300 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID_Janitor> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
-_:g453300 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID_Dormitory> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
-_:g453340 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID> "2"^^<http://www.w3.org/2001/XMLSchema#double> .
-_:g453340 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID_Janitor> "1"^^<http://www.w3.org/2001/XMLSchema#double> .
-_:g453340 <file:/home/vestr/moje_soubory/matfyz/datove_formaty/DataFormats/HW4/4/csv/data-9.csv#ID_Dormitory> "3"^^<http://www.w3.org/2001/XMLSchema#double> .
+<http://www.our-example-data.org/janitor/Marcela> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Person> .
+<http://www.our-example-data.org/janitor/Marcela> <http://xmlns.com/foaf/0.1/firstName> "Marcela"@cs .
+<http://www.our-example-data.org/janitor/Marcela> <http://xmlns.com/foaf/0.1/lastName> "Vomáčková"@cs .
+<http://www.our-example-data.org/janitor/Marcela> <http://example.org/vocabulary/personID> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.our-example-data.org/janitor/Marcela> <http://example.org/vocabulary/ownsBroom> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.our-example-data.org/janitor/Marcela> <http://example.org/vocabulary/worksIn> <http://www.our-example-data.org/dormitory/Strahov> .
+<http://www.our-example-data.org/janitor/Marcela> <http://example.org/vocabulary/worksIn> <http://www.our-example-data.org/dormitory/CambridgeDorm> .
+<http://www.our-example-data.org/student/David> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/vocabulary/Person> .
+<http://www.our-example-data.org/student/David> <http://xmlns.com/foaf/0.1/firstName> "David"@cs .
+<http://www.our-example-data.org/student/David> <http://xmlns.com/foaf/0.1/lastName> "Petera"@cs .
+<http://www.our-example-data.org/student/David> <http://example.org/vocabulary/personID> "86"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.our-example-data.org/student/David> <http://example.org/vocabulary/middleName> "Honza"@cs .
+<http://www.our-example-data.org/student/David> <http://example.org/vocabulary/middleName> "David" .
+<http://www.our-example-data.org/student/David> <http://example.org/vocabulary/middleName> "Terka"@cs .
+<http://www.our-example-data.org/student/David> <http://example.org/vocabulary/staysIn> <http://example.org/vocabulary/DormRoom/Strahov10> .
+<http://www.our-example-data.org/student/David> <http://example.org/vocabulary/studiesAt> <http://example.org/vocabulary/University/CharlesUniversity> .
